@@ -1,0 +1,23 @@
+Why Java ?
+  Software
+  Types of s/w
+    Desktop
+    Application s/w
+    Web Application
+    Mobile Application
+    Hybrid Application
+    UI/UX
+    Front end, Back end
+    Single Page Application , Multipage Application
+    Static Web site , Dynamic Web Site
+    
+What is Java ?
+   Programming Language
+   Low level, High Level
+   Function Oriented
+   Top down, Bottom up
+   Object Oriented
+   statically typed , dynamically typed
+   partially oo , purely oo
+   paradigm [Style Of Programming]
+   Object
