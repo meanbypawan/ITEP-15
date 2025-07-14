@@ -18,14 +18,15 @@ class TestMain{
        b = 20;
        c = 30;
        d = 40;
-       boolean x = (a > b) & (++c < d);
+       boolean x = (a > b) && (++c < d) || (++a<c);
        /*
-          x  = (a > b) && (++c < d);
-                10 > 20
-                 false && (++c<d)
-                 false &&  31 < 40
-                 false && true
-                      false      
+         x = (a > b) && (++c < d) || (++a<c);
+             (10>20)
+               false && (++c < d) || (++a<c)
+                        false || (++a<c)
+                        false || 11 < 30
+                        false || true
+                             true
         */
        System.out.println(x);
        System.out.println("a : "+a);
