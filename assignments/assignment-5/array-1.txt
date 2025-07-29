@@ -1,0 +1,58 @@
+1. WAP to Enter n element in array and print array
+2. WAP to program to calculate the sum of all element of array.
+3. WAP to program calaculate the sum of all even element and all odd element of array
+4. WAP to find an element in array.
+5. WAP to replace all element with 0 which is multiple of 5
+6. WAP to sort the array
+7. WAP to search an element in array using binary search.
+8. WAP to insert a element in array at specific position.
+9. WAP to delete element from array at specific position.
+10.WAP to to count the occurance of all element in array
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
