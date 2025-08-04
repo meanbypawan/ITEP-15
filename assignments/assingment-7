@@ -1,0 +1,40 @@
+Java OOP Exercises (using Setters)
+Employee Record System
+Create a class Employee with private fields: id, name, and salary.
+Use setter methods to assign values. Add a method to display employee details.
+
+Book Library
+Create a class Book with fields: title, author, and price.
+Use setters to assign values and a method to print book details.
+
+Bank Account
+Create a class BankAccount with fields: accountNumber, holderName, balance.
+Use setters to assign values. Add a method to display balance.
+
+Car Info Manager
+Create a class Car with fields: brand, model, and year.
+Use setters to assign values. Create a method to print full car info.
+
+Product Inventory
+Create a class Product with fields: productId, name, quantity, price.
+Use setters to assign values. Add a method to calculate total value (quantity * price).
+
+Movie Rating System
+Create a class Movie with fields: name, genre, and rating.
+Use setters and create a method isHit() that returns true if rating ≥ 8.0.
+
+Student Result Checker
+Create a class Student with fields: name, mathMarks, scienceMarks.
+Use setters to assign values. Add a method getAverage().
+
+Mobile Phone Store
+Create a class Mobile with fields: brand, model, price.
+Use setters to set values. Create a method to check if phone is affordable (price < 20000).
+
+Circle Geometry
+Create a class Circle with field radius.
+Use a setter to assign radius. Add methods to compute area and circumference.
+
+Rectangle Area Calculator
+Create a class Rectangle with fields: length, width.
+Use setters to assign values. Add a method to calculate area.
