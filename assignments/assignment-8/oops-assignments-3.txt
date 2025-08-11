@@ -5,6 +5,8 @@ Object-oriented programming: Object-oriented programming (OOP) is a programming 
 A Java class file is a file (with the .class filename extension) containing Java bytecode that can be executed on the Java Virtual Machine (JVM). A Java class file is usually produced by a Java compiler from Java programming language source files (.java files) containing Java classes (alternatively, other JVM languages can also be used to create class files).
 If a source file has more than one class, each class is compiled into a separate class file.
 ----------------------------------------------------------------------
+***** :- Add Two Time Class Object.
+
 1. Write a Java program to create a class called "Person" with a name and age attribute. Create two instances of the "Person" class, set their attributes using the constructor, and print their name and age.
 
  
