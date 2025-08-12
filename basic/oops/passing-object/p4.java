@@ -3,7 +3,7 @@ Write a Java program to create a class called "Bank" with a collection of accoun
 */
 import java.util.ArrayList;
 class Bank{
-    ArrayList<Account> al = new ArrayList<Account>();
+    private ArrayList<Account> al = new ArrayList<Account>();
     
     public void addAccount(Account account){
        al.add(account);
