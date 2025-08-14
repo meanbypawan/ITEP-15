@@ -1,0 +1,177 @@
+. Write a Java program to concatenate Two strings
+
+ 
+
+2. Write a Java program to get the character at the given index within the String
+
+
+4. Write a Java program to count a number of Unicode code points in the specified text range of a String
+
+ 
+
+5. Write a Java program to compare two strings lexicographically Two strings are lexicographically equal if they are the same length and contain the same characters in the same positions
+
+ 
+
+6. Write a Java program to compare two strings lexicographically , ignoring case differences
+
+ 
+
+7. Write a Java program to concatenate a given string to the end of another string
+
+ 
+
+8. Write a Java program to test if a given string contains the specified sequence of char values
+
+
+11. Write a Java program to check whether a given string ends with the contents of another string
+
+ 
+
+12. Write a Java program to check whether two String objects contain the same data
+
+ 
+
+13. Write a Java program to get the contents of a given string as a byte array
+
+ 
+
+14. Write a Java program to get the canonical representation of the string object
+
+ 
+
+15. Write a Java program to create a character array containing the contents of a string
+
+ 
+
+16. Write a Java program to convert all the characters in a string to Lowercase
+
+ 
+
+17. Write a Java program to convert all the characters in a string to Uppercas
+
+ 
+
+18. Write a java program to get the length of a given string
+
+ 
+
+19. Write a Java program to replace a specified character with another character
+
+ 
+
+20. Write a Java program to replace each substring of a given string that matches the given regular expression with the given replacement
+
+ 
+
+21. Write a Java program to check whether a given string starts with the contents of another string
+
+ 
+
+22. Write a Java program to get a substring of a given string between two specified positions
+
+ 
+
+23. Write a Java program to trim any leading or trailing whitespace from a given string
+
+ 
+
+24. Write a Java program to create a new string repeating every character twice of a given string
+
+ 
+
+25. Write a Java program to return the sum of the digits present in the given string. If there is no digits the sum return is 0
+
+ 
+
+26. Write a Java program to Count words in Given String
+
+ 
+
+27. Write a Java program to Swap Two Strings
+
+ 
+
+28. Write a Java program to Swap Two Strings without Third String Variable
+
+ 
+
+29. Write a Java program to Reverse Each Word of a String
+
+ 
+
+30. Write a Java program How to search a word inside a string?
+
+ 
+
+31. Write a Java program to find first non repeating character in a string
+
+ 
+
+32. Write a Java program to print after removing duplicates from a given string
+
+ 
+
+33. Write a Java program to find the maximum occurring character in a string
+
+ 
+
+34. Write a Java program to reverse words in a given string
+
+ 
+
+35. Write a Java program to find maximum between two string
+
+ 
+
+36. Write a Java program How to check Palindrome Strin
+
+ 
+
+37. Write a Java program to check if the letter 'x' is present in the word 'String Exercises'
+
+ 
+
+38. Write a Java program to Given string Convert Lowercase to Uppercase
+
+ 
+
+39. Write a Java program to Given string Convert Uppercase to Lowercase
+
+ 
+
+40. Write a Java program to Count Number of Uppercase and Lowercase letters
+
+ 
+
+41. Write a program to Trim a given string using String.trim() method
+
+ 
+
+42. Write a program to Replace string with another string in java using String.replace() method
+
+ 
+
+43. Write a program to Convert any type of value to string value using String.valueOf() method
+
+45. Write a program to Compare the strings using equals(), compareTo() and == operator
+
+ 
+
+46. Write a program to First alphabet capital of each word in given string
+
+ 
+
+47. Write a program to Convert a character array to string
+
+ 
+
+48. Write a program to String concatenation with primitive data type values
+
+ 
+
+49. Write a program to Check given strings are Anagram or not
+
+ 
+
+50. Write a program to separate all tokens (words) using StringTokenizer

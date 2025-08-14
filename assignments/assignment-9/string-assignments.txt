@@ -1,0 +1,31 @@
+1) What is String in java? What  do you mean by mutability and immutability?
+2) What is diffenence b/w String , SrtingBuffer and StringBuilder?
+Explain with example.
+3) What is difference b/w == operator and String class equals() method?
+4) How many ways to initialize String  in java? Explain role of String literal pool.
+5) Write a java program to reverse each word of String.
+	Sample Input: “Java Is Plateform Independent”
+	Output: “avaJ sI mrofetalP tnednepednI”
+6) Write a java program to find all possible palindrom of given String.
+	Sample Input: “aaabbbacccababacccaabb”
+7)WAP to remove the duplicate letters from given String.
+	Sample Input: “aabbccddd”
+	Output: “abcd”
+8) WAP to find out total occurrence of each letter in string.
+	 Sample Input: “aabbccddd”
+	 Output:   a- 2 times
+			b- 2 times
+			c- 2 times
+			d- 3 times
+9) WAP to find word of maximum length in given String.
+	Sample Input: “Dear Student ,You have need to work hard”
+`	Output: “Student”
+10) WAP to count the word whose first letter is  vowel.
+11) Input name of a person and count how many vowels it contains. Use String class methods.
+12) Input data exactly in the following format, and print sum of all integer values.
+	Sample Input: “67, 89, 23, 67, 12, 55, 66”. (Hint use String class split method and Integer class parseInt method)
+13)WAP check if two Strings are anagrams of each other?
+(Hint Anagram words: LISTEN - SILENT 
+				  TRIANGLE - INTEGRAL)
+
+14) WAP check if a String contains only digits?
