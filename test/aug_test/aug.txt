@@ -1,0 +1,33 @@
+Q1. (3 Marks)
+
+Write a Java program to check whether a given number is prime or not.
+
+Input: 29
+
+Output: 29 is a prime number.
+
+Q2. (3 Marks)
+
+Write a Java program to find the second largest number in an array.
+
+Example Input: {10, 5, 20, 8, 25, 3}
+
+Example Output: Second Largest = 20
+
+Q3. (4 Marks)
+
+Write a Java program using OOP concepts:
+
+Create a class Student with attributes: name, marks.
+
+Create a method getGrade() that returns:
+
+"A" if marks ≥ 80
+
+"B" if marks ≥ 60 and < 80
+
+"C" if marks ≥ 40 and < 60
+
+"F" if marks < 40
+
+Create main() method to create 3 students and print their name with grade.
