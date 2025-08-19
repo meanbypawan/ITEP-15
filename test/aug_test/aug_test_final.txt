@@ -1,0 +1,46 @@
+Q1. (3 Marks) – Logic Based (Array)
+
+Write a Java program to remove duplicate elements from an array and print the unique elements.
+Example:
+
+Input: [1, 2, 2, 3, 4, 4, 5]
+Output: [1, 2, 3, 4, 5]
+----------------------------------------------------------------------------------------
+Q2. (3 Marks) – Logic Based (String)
+
+Write a Java program to reverse each word in a string while keeping the word order same.
+Example:
+
+Input: "Java is very simple"
+Output: "avaJ si yrev elpmis"
+-----------------------------------------------------------------------------------------
+Q3. (4 Marks) – OOP Based (Library Management)
+
+Design a simple Library Management System using classes with the following:
+
+A Book class with fields: id, title, author.
+
+A Library class with methods:
+
+addBook(Book b)
+
+listBooks()
+
+deleteBook(int id)
+
+Write a program to:
+
+Add 3 books.
+
+List all books.
+
+Delete a book by id and display remaining books.
+
+📌 Marking Scheme
+
+Q1: 3 Marks
+
+Q2: 3 Marks
+
+Q3: 4 Marks
+Total: 10 Marks
