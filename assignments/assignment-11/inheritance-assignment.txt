@@ -1,0 +1,212 @@
+Problem Statement 🚗
+
+You are building a transportation system for a logistics company.
+
+Requirements:
+
+Every Vehicle should have:
+
+a registration number,
+
+a method to start,
+
+a method to stop.
+
+Some vehicles run on Fuel (like Car, Truck), while others run on Electricity (like ElectricBike, ElectricCar).
+
+Create an interface Chargeable that forces all electric vehicles to implement:
+
+chargeBattery() method.
+
+Create an abstract class Vehicle that:
+
+Stores the registration number.
+
+Has abstract methods start() and stop().
+
+Has a concrete method displayInfo() to show vehicle details.
+
+Create subclasses:
+
+Car (inherits from Vehicle) → Fuel based.
+
+Truck (inherits from Vehicle) → Fuel based.
+
+ElectricBike (inherits from Vehicle and implements Chargeable).
+
+ElectricCar (inherits from Vehicle and implements Chargeable).
+
+In the main class (TransportSystem),
+
+Create objects of all types of vehicles.
+
+Call their methods (start, stop, chargeBattery where required).
+
+Expected Output Example
+Car KA01AB1234 starting with petrol engine...
+Car KA01AB1234 stopped.
+Truck KA02XY9876 starting with diesel engine...
+Truck KA02XY9876 stopped.
+Electric Bike KA03EL5678 starting silently...
+Electric Bike KA03EL5678 battery charging...
+Electric Bike KA03EL5678 stopped.
+Electric Car KA04EV4321 starting silently...
+Electric Car KA04EV4321 battery charging...
+Electric Car KA04EV4321 stopped.
+------------------------------------------------------------------------------------------------------------------------------
+🔹 Problem Set on Abstract Class, Inheritance & Interface
+Problem 1: Payment Gateway System 💳
+
+Create an abstract class Payment with:
+
+amount field
+
+abstract method pay()
+
+concrete method paymentDetails()
+
+Subclasses:
+
+CreditCardPayment
+
+DebitCardPayment
+
+UPIPayment
+
+Create an interface Refundable with processRefund() method.
+
+Only CreditCardPayment and UPIPayment should implement Refundable.
+
+In main class, create different payments and process refund where applicable.
+---------------------------------------------------------------------------------------------------------
+Problem 2: Employee Management System 👨‍💼👩‍💼
+
+Abstract class Employee:
+
+id, name, salary fields
+
+abstract method calculateSalary()
+
+concrete method showDetails()
+
+Subclasses:
+
+FullTimeEmployee (salary = fixed monthly)
+
+PartTimeEmployee (salary = hourly * rate)
+
+Intern (stipend based)
+
+Interface BonusEligible with method giveBonus().
+
+Only FullTimeEmployee and PartTimeEmployee should implement BonusEligible.
+
+In main class, create employees and calculate salary + bonus.
+-------------------------------------------------------------------------------------------------------------
+Problem 3: Online Learning Platform 🎓
+
+Abstract class Course:
+
+title, duration fields
+
+abstract method startCourse(), endCourse()
+
+concrete method courseDetails()
+
+Subclasses:
+
+VideoCourse
+
+LiveCourse
+
+Interface CertificateProvider with generateCertificate() method.
+
+Only VideoCourse provides certificates.
+
+In main method, simulate starting, ending, and generating certificates.
+------------------------------------------------------------------------------------------------------------
+Problem 4: Banking System 🏦
+
+Abstract class BankAccount:
+
+accountNumber, balance fields
+
+abstract methods: deposit(), withdraw()
+
+concrete method showBalance()
+
+Subclasses:
+
+SavingsAccount (cannot withdraw below ₹1000)
+
+CurrentAccount (no min balance required)
+
+Interface LoanEligible with method checkLoanEligibility().
+
+Only SavingsAccount is loan eligible.
+-------------------------------------------------------------------------------------------------
+Problem 5: Smart Home System 🏠💡
+
+Abstract class Appliance:
+
+name, power
+
+abstract methods turnOn(), turnOff()
+
+concrete method showStatus()
+
+Subclasses:
+
+Fan
+
+Light
+
+WashingMachine
+
+Interface SmartDevice with method connectWifi().
+
+Only Light and WashingMachine are smart devices.
+
+In main method, turn on/off appliances and connect smart ones to WiFi.
+---------------------------------------------------------------------------------------------------
+Problem 6: Zoo Animal Management 🦁🐘🐦
+
+Abstract class Animal:
+
+name, age
+
+abstract methods eat(), makeSound()
+
+concrete method showInfo()
+
+Subclasses:
+
+Lion
+
+Elephant
+
+Parrot
+
+Interface Flyable with fly() method.
+
+Only Parrot implements Flyable.
+--------------------------------------------------------------------------------------------
+Problem 7: E-commerce Order System 🛒
+
+Abstract class Order:
+
+orderId, amount
+
+abstract methods processOrder(), cancelOrder()
+
+concrete method orderSummary()
+
+Subclasses:
+
+OnlineOrder
+
+StorePickupOrder
+
+Interface DiscountApplicable with applyDiscount() method.
+
+Only OnlineOrder gets discount.
