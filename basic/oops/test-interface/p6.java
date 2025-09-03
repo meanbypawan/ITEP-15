@@ -21,6 +21,6 @@ class TestMain{
         };
         System.out.println("Multiplication : "+obj.operation(20,10));
         System.out.println("Greater value : "+obj2.operation(20,10));
-         System.out.println("Addition : "+obj3.operation(20,10));
+        System.out.println("Addition : "+obj3.operation(20,10));
     }
 }
