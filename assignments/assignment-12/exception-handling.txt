@@ -1,0 +1,152 @@
+1. Divide by Zero Exception
+
+👉 Write a program that takes two numbers from the user and divides them. Handle the case where the second number is zero.
+
+// Expected
+Enter first number: 10
+Enter second number: 0
+java.lang.ArithmeticException caught: / by zero
+
+2. InputMismatchException
+
+👉 Ask the user to enter an integer. If the user enters text instead, catch the exception.
+
+// Expected
+Enter an integer: abc
+java.util.InputMismatchException caught
+
+3. ArrayIndexOutOfBoundsException
+
+👉 Create an array of size 5. Ask the user for an index and print the element. Handle the case when the index is out of range.
+
+// Expected
+Enter index: 8
+java.lang.ArrayIndexOutOfBoundsException caught
+
+4. NullPointerException
+
+👉 Declare a String = null. Try to call length() on it. Handle the exception.
+
+// Expected
+java.lang.NullPointerException caught
+
+5. Multiple Catch Blocks
+
+👉 Take two integers and perform division. Handle both ArithmeticException and InputMismatchException separately.
+
+6. Finally Block Practice
+
+👉 Open a Scanner, read an input, and always close the scanner in finally (show that finally always executes).
+
+7. Custom Exception
+
+👉 Create your own exception InvalidAgeException. If age < 18, throw the exception.
+
+class InvalidAgeException extends Exception {
+    InvalidAgeException(String msg) {
+        super(msg);
+    }
+}
+
+
+Test in main:
+
+if(age < 18) throw new InvalidAgeException("Not eligible for voting");
+
+8. Checked vs Unchecked Exception
+
+👉 Write a program with a method that throws IOException (checked) and another that throws ArithmeticException (unchecked). Show the difference in compiler behavior.
+
+9. Throws Keyword
+
+👉 Write a method readFile(String fileName) that uses FileReader. Declare it with throws IOException and handle it in main().
+
+10. Try-with-Resources
+
+👉 Open a file using try-with-resources (Java 7+) and show that the file closes automatically without finally.
+------------------------------------------------------------------------------------------------------------------------------------------
+1. Banking System – Insufficient Balance
+
+You are building a banking system. A user tries to withdraw more money than available in their account.
+
+Which exception would you throw?
+
+Will you use a checked or unchecked exception? Why?
+
+Write a custom exception InsufficientBalanceException.
+
+2. File Upload System
+
+A web app allows file upload. But the file path provided by the user does not exist.
+
+Which Java exception will occur?
+
+How would you handle it so the program doesn’t crash?
+
+Should you retry or show a friendly message to the user?
+
+3. Online Exam System
+
+A student enters their roll number (integer), but by mistake they enter "abc".
+
+Which exception will occur?
+
+How can you catch it and ask them to re-enter?
+
+Can you use a loop to keep asking until they enter valid input?
+
+4. E-commerce Discount Calculation
+
+Suppose you are dividing total amount by quantity to get per item price. If quantity = 0, what happens?
+
+Which exception will occur?
+
+How will you ensure the program continues and doesn’t stop execution?
+
+5. ATM PIN Validation
+
+If the user enters a wrong PIN 3 times, throw a custom exception AccountLockedException.
+
+Which exception handling mechanism will you use?
+
+Should it be checked (force the programmer to handle) or unchecked?
+
+6. Student Management System
+
+You are fetching student data from a database. If the record is not found:
+
+Will you return null or throw a RecordNotFoundException?
+
+Which approach is better and why?
+
+7. Network Connection
+
+Suppose you are connecting to a server. The connection might fail due to network issues.
+
+Which exception will be thrown?
+
+Should you handle it with try-catch or let it propagate using throws? Why?
+
+8. Shopping Cart
+
+While calculating total price, one product’s price is missing (null).
+
+What exception will occur?
+
+How would you handle it? (Default price, error message, or skip item?)
+
+9. Online Library System
+
+A student is trying to issue more books than the limit (say, 3).
+
+Should you handle it with a business rule check or by throwing a custom exception MaxBooksIssuedException?
+
+Justify your answer.
+
+10. Real-Time Logging
+
+You are writing logs to a file. Suddenly, the file system becomes read-only.
+
+Which exception will occur?
+
+How would you make sure logs are not lost (maybe backup to console or DB)?
