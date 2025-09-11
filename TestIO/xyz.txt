@@ -1,0 +1,9 @@
+Java is very simple.
+Java is object oriented programming language.
+Java is paltform independent.
+Java is Robust.
+Java is architectural neutral
+Java is multithreaded
+Java is secured
+Java is typed programming language
+Java is compiled and interpreted both.
