@@ -1,0 +1,70 @@
+🏗 1. Constructor Problem
+
+Car Inventory System
+
+Create a class Car with fields: brand, model, price.
+
+Implement:
+
+A default constructor (sets "Unknown" values and price = 0).
+
+A parameterized constructor to initialize all fields.
+
+A copy constructor to clone another Car.
+
+Write a test class to create cars using all three constructors and print their details.
+
+⚠ 2. Exception Handling Problem
+
+Bank Withdrawal Simulation
+
+Create a custom exception InsufficientFundsException.
+
+Create a class BankAccount with fields: accountNumber, balance.
+
+Add a withdraw(double amount) method that:
+
+Throws InsufficientFundsException if the amount > balance.
+
+Deducts the amount otherwise.
+
+In main, create an account, attempt withdrawals, and handle the exception gracefully.
+
+🧵 3. String Problem #1
+
+Find First Non-Repeating Character
+
+Write a program that takes a string input and returns the first character that does not repeat.
+
+If all characters repeat, return "None".
+
+Example:
+
+Input: "swiss" → Output: "w"
+
+Input: "aabbcc" → Output: "None"
+🧵 4. String Problem #2
+
+Reverse Each Word in a Sentence
+
+Input: "Java makes coding fun"
+
+Output: "avaJ sekam gnidoc nuf"
+
+Keep the word order intact but reverse the characters of each word.
+
+🧩 5. OOPs Problem
+
+Library Management (Inheritance + Polymorphism)
+
+Create an abstract class LibraryItem with fields: title, id.
+
+Add an abstract method calculateLateFee(int daysLate).
+
+Create two subclasses:
+
+Book: Late fee = ₹2 per day.
+
+DVD: Late fee = ₹5 per day.
+
+In main, create a list of LibraryItem references (both Book and DVD objects), loop through them, and print late fees using polymorphism.
