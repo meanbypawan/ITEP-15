@@ -1,0 +1,9 @@
+1 "1 2 3 4 5 6 7 8 9 10"
+2. "1,2,3,4,5,6,7,8,9,10"
+3. "Hello 1 world 2 welcome 3"
+ You have to add numeric value.
+4. WAP To enter name of user and check whether it valid name or not.
+5. WAP to enter mobile of user and check wheter it is valid or invalid.
+   [length must be 10, all letter must be digit]
+------------------------------------------------------------------------------------------   
+
