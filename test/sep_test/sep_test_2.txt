@@ -1,0 +1,58 @@
+🟢 1. Object-Oriented Programming Problem
+📌 Problem: Library Management (Classes & Inheritance)
+
+Create a small library system:
+
+Create a base class Book with:
+
+title, author, price.
+
+A method displayInfo() to print book details.
+
+Create a derived class EBook with:
+
+fileSize (in MB) and format.
+
+Override displayInfo() to include ebook details.
+
+In main(), create an array of Book references, store both Book and EBook objects, and print their details using polymorphism.
+
+🟠 2. Exception Handling Problem #1
+📌 Problem: Division Calculator
+
+Write a program that:
+
+Takes two integers as input.
+
+Performs division and handles ArithmeticException if the denominator is zero.
+
+Use a finally block to print "Program Completed".
+
+Sample Input/Output:
+
+Input: 10 0  
+Output: Cannot divide by zero  
+Program Completed
+
+🟠 3. Exception Handling Problem #2
+📌 Problem: Age Validator
+
+Ask the user for their age.
+
+If the age is less than 18 or greater than 100, throw a custom exception InvalidAgeException.
+
+Catch the exception and display "Invalid age entered".
+
+If valid, print "Age accepted: <age>".
+
+🔵 4. Method Overloading Problem
+📌 Problem: Area Calculator
+
+Create a class AreaCalculator with overloaded methods:
+
+calculateArea(int side) → returns the area of a square.
+
+calculateArea(int length, int breadth) → returns the area of a rectangle.
+
+calculateArea(double radius) → returns the area of a circle.
+In main(), demonstrate all three methods.
