@@ -1,0 +1,53 @@
+Q1. Object-Oriented Programming (OOP)
+
+Scenario-based Question:
+A university has different types of courses:
+
+OnlineCourse (conducted on Zoom, Google Meet, etc.)
+
+OfflineCourse (conducted in classrooms)
+
+Each course has attributes: courseName, duration, fees.
+
+OnlineCourse has extra attribute: platform (e.g., Zoom).
+
+OfflineCourse has extra attribute: classroomNumber.
+
+👉 Write a program using inheritance and polymorphism where a CourseManager class stores multiple courses and prints their details.
+
+Use method overriding to display details differently for OnlineCourse and OfflineCourse.
+-------------------------------------------------------------------------------------------------------------------------
+Q2. Exception Handling (Unique)
+
+Create a program that simulates ATM withdrawal.
+
+User enters the amount to withdraw.
+
+If the amount is greater than the balance, throw an InsufficientBalanceException (custom exception).
+
+If the entered amount is negative or zero, throw an InvalidAmountException (custom exception).
+
+Otherwise, deduct the amount and print remaining balance.
+
+Q3. Exception Handling (Different from Q2)
+
+Write a program that takes an array of integers and asks the user for an index to access.
+
+If the index is invalid, handle it using ArrayIndexOutOfBoundsException.
+
+Print a message like "Invalid index, please enter a valid position".
+
+Otherwise, display the element at that index.
+
+Q4. Method Overloading (New)
+
+Create a class ReportGenerator that can generate different types of reports using method overloading:
+
+generate(String title, String content) → generates a text report.
+
+generate(String title, int[] data) → generates a numeric report (prints average of numbers).
+
+generate(String title, String... points) → generates a bullet point report.
+
+👉 Write a main method that calls all three versions of generate().
+
