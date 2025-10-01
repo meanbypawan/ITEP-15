@@ -7,6 +7,13 @@ class Customer{
         this.name = name;
         this.balance = balance;
     }
+    public int hashCode(){
+        return id;
+    }
+    public boolean equals(Object o){
+        Customer c = (Customer)o;
+        return (this.id == c.id) && (this.name.equals(c.name));
+    }
     public Customer(){}
     public String toString(){
         return id+" "+name+" "+balance;
