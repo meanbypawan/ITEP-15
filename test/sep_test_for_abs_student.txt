@@ -1,0 +1,80 @@
+Q1. Object-Oriented Programming (Encapsulation, Inheritance, Polymorphism, and Abstraction)
+
+Problem:
+Design a mini Banking System using OOP concepts.
+
+Create an abstract class Account with fields: accountNumber, balance, and methods:
+
+deposit(double amount)
+
+withdraw(double amount) (abstract)
+
+displayDetails()
+
+Create two subclasses:
+
+SavingsAccount – withdrawal not allowed if balance goes below 1000.
+
+CurrentAccount – allow overdraft up to ₹20,000.
+
+Demonstrate the behavior of both account types in main() using runtime polymorphism.
+
+Expected Output Example:
+
+Deposit: ₹5000  
+Withdraw: ₹4500  
+Remaining balance: ₹500  
+Error: Minimum balance should be ₹1000 (for SavingsAccount)
+
+Q2. Exception Handling (Built-in & Multiple Catch)
+
+Problem:
+Write a Java program that takes an array of integers from the user, asks for an index, and prints the element at that index.
+Handle following exceptions properly:
+
+ArrayIndexOutOfBoundsException if index is invalid.
+
+InputMismatchException if input is not a number.
+
+NullPointerException if array is not initialized properly.
+
+Use finally block to print:
+
+Execution completed.
+
+
+Expected Output Example:
+
+Enter index: 10  
+Error: Invalid index!
+Execution completed.
+
+Q3. Custom Exception Handling
+
+Problem:
+Create a custom exception InsufficientStockException.
+You are designing an e-commerce inventory system:
+
+Class Product with fields: productId, name, availableQuantity.
+
+Method purchase(int quantity) should throw InsufficientStockException if purchase quantity > availableQuantity.
+
+In main(), create an object of Product and simulate a purchase request that triggers the custom exception.
+
+Expected Output Example:
+
+Enter purchase quantity: 15  
+Exception: InsufficientStockException: Only 5 items available in stock!
+
+Q4. Method Overloading
+
+Problem:
+Create a utility class StringFormatter that formats strings in different ways using method overloading:
+
+format(String s) → converts to uppercase
+
+format(String s, int width) → adds spaces/padding on the right to match width
+
+format(String s, char ch) → replaces all spaces in s with the given character
+
+Demonstrate all overloaded methods in main().
