@@ -1,0 +1,45 @@
+Database :-
+ What is the database ? What are differences between database and file ?
+ What is RDBMS? How will you differentiate between DBMS and RDBMS ?
+ What are the features of RDBMS ?
+ What is MySQL ?
+ How to create database in MySQL ?
+ What are datatypes supported by MySQL ?
+ What are key ?
+ What are Constraint ?
+ SQL Categories :-
+  DDL,DML,TCL,DRL,DCL
+------------------------------------------------------------------------------------ 
+Database Listing :-
+  show databases;
+
+Creating Database :-
+  create database empdb;
+Drop Database :-
+  drop database empdb;
+
+Using database 
+  use empdb;
+-----------------------------------------------------------------------------------
+Datatypes :- int, tinyint, char, varchar, text, float, date, blob, clob
+char v/s varchar v/s text ---> String
+Creating table :-
+  create table employee(
+    id int,
+    name varchar(100),
+    mobile int(10),
+    age int(3),
+    salary int(10)
+  )  
+Listing Table
+ show tables            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
