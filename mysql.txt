@@ -33,6 +33,65 @@ Creating table :-
   )  
 Listing Table
  show tables            
+drop table table_name;
+
+create table employee(
+  id int primary key auto_increment,
+  name varchar(100) not null,
+  salary int(10) default 10000,
+  mobile varchar(10) unique key,
+  age int(3) check(age>17)
+  )
+
+insert into employee(name,salary,mobile,age) values('Rahul',90000,'9009111222',20);
+insert into employee(name,mobile,age) values('Cheeku','9009111999',29);
+insert into employee(name,salary,mobile,age)
+values('Ankita',150000,'9009111444',28),
+('Nikita',1450000,'9009111555',26),
+('Shree',190000,'9009111666',23),
+('Ishu',78000,'9009111777',29),
+('Dishu',90000,'9009111888',30)
+
+select id,name,salary from employee;
+
+Filter :- where clause
+
+select id,name,salary from employee where salary > 80000
+select id,name,salary from employee where salary >=80000 and salary <=100000
+select id,name,salary from employee where salary between 80000 and 100000
+select id,name,salary from employee where age = 28 or age = 30
+select id,name,salary from employee where age in (28,30)
+select id,name,salary from employee where (salary >=80000 and salary <=10000) or age = 30;
+select id,name,age,salary from employee where salary is null; [is not null]
+Wild card character :-  %, _
+% :- zero or any number of occurance
+_ :- 
+select id,name,salary from employee where name like '%a';
+select id,name,salary from employee where name like '%k%';
+select id,name,salary from employee where name like '%s__'
+--------------------------------------------------------------------------------
+Aggregate Function
+  sum(), count(), max(), min(), avg(),...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             
             
             
