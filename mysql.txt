@@ -73,14 +73,107 @@ select id,name,salary from employee where name like '%s__'
 Aggregate Function
   sum(), count(), max(), min(), avg(),...
 
+ Fetch the employee details whose salary is maximum
+ select * from employee where salary = max(salary)
 
+ 
+ select id,name,salary from employee
+   where salary = ( select max(salary) from employee)
 
+ order by :- asc desc :-- sorting
+ select * from employee order by salary desc;
+ select * from employee order salary desc limit 3
+ select * from employee order by salary desc limit 3,2
+ 
+ select id,name,salary from employee where salary = (
+  select max(salary) from employee where salary < ( select max(salary) from employee))
+ 
+  select id,name,salary from employee where salary = (
+  select max(salary) from employee where salary < ( select max(salary) from employee
+   where salary < ( select max(salary) from employee)))
+ 
+  alter table employee add(skill varchar(100))
+  
+  update employee set skill = 'ReactJs' where id in (4,5,6)
+ 
+  select count(*),skill from employee group by skill having age >=25; 
+  
+  select skill,sum(salary) from employee where skill = 'Java' group by skill
+--------------------------------------------------------------------------------------------------------
+RelationShip/Mapping-Cardinalities/Association
+ 1. One To One :- If record of Table-A is only associated with exactly one record of Table-B.
+    e.g. In E-commerce Scenario , User has One Cart.
+ 2. One To Many :- If record of Table-A is associated with multiple record of Table-B.
+       e.g Category hasMany Product
+ 3. Many To Many :- If record of Table-A is associated with multiple record of Table-B and
+    record of Table-B is also associated with mutliple record of Table-A.
+    Note:- Need Third(Supporting Table) To implement many to many
+    e.g. :-  Cart has Many Product
+           Product belongsToMany Cart
+ create table department(
+   id int primary key auto_increment,
+   department_name varchar(100));
+   
+   insert into department(department_name) values('HR'),('Developement'),('Admin'),('Operation')  
+   
+   alter table employee add(
+     department_id int,
+     foreign key(department_id) references department(id));
+-----------------------------------------------------------------------------
+   create table city(
+     id int primary key auto_increment,
+     city_name varchar(100));
+   insert into city(city_name) values('Indore'),('Pune'),('Mumbai')
+     
+   employee(department_id)   deparment(id)   
+   employee(city_id)         city(id)
+   
+   select employee.id,employee.name,department.department_name
+   from employee inner join department on employee.department_id = department.id
+      
+   alter table employee add(
+     city_id int,
+     foreign key (city_id) references city(id));
+   
+   update employee set city_id = 1 where id in(1,3,4)
+   update employee set city_id=2 where id in(5,6,7,8,9)
+   update employee set city_id = 3 where id not in(1,3,4,5,6,7,8,9)  
 
+   select employee.id,employee.name,department.department_name,city.city_name
+   from employee inner join department on employee.department_id = department.id
+   inner join city on employee.city_id = city.id
 
+   select employee.id,employee.name,department.department_name
+   from employee left outer join department on employee.department_id = department.id
+    
+   
+   select employee.id,employee.name,department.department_name
+   from employee right outer join department on employee.department_id = department.id
+    
 
+   select * from employee,department.
+   
+   create table user(
+     id int primary key,
+     name varchar(100),
+     friend_id int);
 
+   insert into user(id,name,friend_id)
+   values(100,'Shivam',104),
+   (101,'Rahul',103),
+   (102,'Rahil',100),
+   (103,'Lili',102),
+   (104,'Divya',null)
 
-
+   select u1.name as name,u2.name as friend_name
+   from user as u2 inner join user as u1 on u1.id = u2.friend_id
+   
+   
+   
+   
+              
+             
+   
 
 
 
