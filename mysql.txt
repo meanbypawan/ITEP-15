@@ -168,14 +168,17 @@ RelationShip/Mapping-Cardinalities/Association
    select u1.name as name,u2.name as friend_name
    from user as u2 inner join user as u1 on u1.id = u2.friend_id
    
+   ----------------------------------------------------------------------------------------
+   update employee set salary=89000, mobile='9009343434' where id = 10
    
-   
-   
+   delete from employee where id = 11
               
              
+   create view EMPLOYEE_DETAILS as select employee.id,employee.name,department.department_name,city.city_name
+   from employee inner join department on employee.department_id = department.id
+   inner join city on employee.city_id = city.id 
+
    
-
-
 
 
 
