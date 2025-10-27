@@ -1,0 +1,42 @@
+🎯 Objective
+
+Create a Java console-based application that performs CRUD operations (Create, Read, Update, Delete)
+ on an employee table using JDBC, following the DAO + Model + Main App architecture.
+
+🧩 Database Table
+
+Create this table in MySQL:
+
+CREATE DATABASE company_db;
+
+USE company_db;
+
+CREATE TABLE employee (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    salary DECIMAL(10,2),
+    department VARCHAR(50)
+);
+
+🧱 Project Architecture
+src/
+ ├── model/
+ │     └── Employee.java
+ ├── dao/
+ │     ├── EmployeeDAO.java
+ │     └── EmployeeDAOImpl.java
+ ├── util/
+ │     └── DBConnection.java
+ └── main/
+       └── EmployeeApp.java
+
+🧠 Functional Requirements
+
+Your program should support the following menu options in the console:
+
+1. Add Employee
+2. View All Employees
+3. Update Employee
+4. Delete Employee
+5. Exit
