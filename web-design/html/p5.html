@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            .container{
+                position: relative;
+            }
+            .container div{
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 1px solid black;
+            }
+            .container div:nth-child(4){
+                z-index: 1;
+            }
+            .container div:nth-child(3){
+                z-index: 2;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div style="background-color: red;">1</div>
+            <div style="background-color: blue;">2</div>
+            <div style="background-color: green;">3</div>
+            <div style="background-color: pink;">4</div>
+            <div style="background-color: orange;">5</div>
+        </div>
+    </body>
+</html>

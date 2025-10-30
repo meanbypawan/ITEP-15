@@ -1,0 +1,57 @@
+<html>
+    <head>
+      <style>
+        .container{
+            height: 200px;
+            border: 5px solid blue;
+            padding: 10px;
+        }
+        .container div{
+            width:100px;
+            height: 100px;
+            border: 1px solid black;
+            display: inline-block;
+        }
+        .container div:nth-child(even){
+            background-color: red;
+        }
+        .container div:nth-child(odd){
+            background-color: yellow;
+        }
+        .container div:nth-child(6){
+            background-color: orange;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+        .container div:nth-child(8){
+            background-color: mediumseagreen;
+            position: relative;
+            top: 50px;
+            left: 50px;
+        }
+        .container div:nth-child(11){
+            width: 20px;
+            height: 40px;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+        }
+      </style>
+    </head>
+    <body>
+        <div class="container">
+           <div>1</div>
+           <div>2</div>
+           <div>3</div>
+           <div>4</div>
+           <div>5</div>
+           <div>6</div>
+           <div>7</div>
+           <div>8</div>
+           <div>9</div>
+           <div>10</div>
+           <div>^</div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+}
+body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.main-container{
+    background-color: black;
+    min-height: 100vh;
+    position: relative;
+}
+header{
+    height: 80px;
+    display: flex;
+    
+}
+header div{
+   height: 80px;
+}
+header div:nth-child(1){
+    width: 30%;
+}
+header div:nth-child(2){
+    width: 70%;
+}
+.logo{
+    display: flex;
+    align-items: center;
+    padding-left: 40px;
+}
+.logo-svg{
+    width: 40px;
+    height: 40px;
+}
+.logo-text{
+    background: linear-gradient(130deg,white,rgb(180, 86, 101));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 28px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 800;
+    margin-left: 15px;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-family: Arial, sans-serif;
+    justify-content: flex-end;
+    column-gap: 40px;
+    padding-right: 40px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+.menu button{
+    width: 200px;
+    background-color: rgb(229, 72, 98);
+    border: none;
+    border-radius: 25px;
+    height: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+#section-1{
+    min-height: 650px;
+    display: flex;
+    flex-direction: row;
+}
+#section-1 div{
+    min-height: 100px;
+    width: 50%;
+}
+.section-1-right img{
+    height: 600px;
+    width: 85%;
+}
+.section-1-left{
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.section-1-left h1{
+    color: white;
+    font-size: 90px;
+}
+.section-1-left h1 span{
+    font-style: italic;
+    color: rgb(229, 72, 98);
+}
+.section-1-left p{
+    color: grey;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    
+}
+.section-1-left div{
+    height: 100px;
+    width: 100% !important; 
+}
+.number-content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.number-and-label{
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center;
+}
