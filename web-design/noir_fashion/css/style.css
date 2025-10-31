@@ -110,3 +110,80 @@ header div:nth-child(2){
     flex-direction: column !important;
     justify-content: center;
 }
+.explore-button, .watch-button{
+    background-color:  rgb(229, 72, 98);
+    width: 200px;
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    border: none;
+}
+.watch-button-background{
+    background-color: transparent !important;
+    border: 1px solid white;
+    margin-left: 15px;
+}
+#section-2{
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#section-2 h1{
+    color: white;
+    font-size: 50px;
+}
+#section-2 p{
+    color: grey;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 20px;
+}
+.button-group{
+    height: 100px;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.button-group button{
+    padding: 10px 20px;
+}
+.button-group button:nth-child(1){
+    background-color:  rgb(229, 72, 98);
+    color: white;
+    border: none;
+}
+.section-3{
+    display: flex;
+    min-height: 450px;
+    justify-content: space-around;
+    align-items: center;
+}
+.card{
+   width: 20%;
+   min-height: 440px;
+   border-radius: 5px;
+}
+.card:hover{
+    box-shadow: 0 0px 10px 5px rgb(64, 23, 30);
+}
+.card-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 20px;
+    color: white;
+    height: 140px;
+}
+.card-content button{
+    background-color:  rgb(229, 72, 98);
+    width: 100px !important;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
