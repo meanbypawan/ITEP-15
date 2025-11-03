@@ -12,8 +12,12 @@ body{
 }
 header{
     height: 80px;
+    width: 100%;
     display: flex;
-    
+    position: fixed;
+    top: 0;
+    background-color: black;
+    z-index: 10;
 }
 header div{
    height: 80px;
@@ -53,6 +57,24 @@ header div:nth-child(2){
     letter-spacing: 2.5px;
     text-transform: uppercase;
 }
+.menu span{
+    position: relative;
+    cursor: pointer;
+}
+.menu span::after{
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: rgb(229, 72, 98);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  transition: all 1s ease;
+}
+.menu span:hover::after{
+  width: 100%;
+
+}
 .menu button{
     width: 200px;
     background-color: rgb(229, 72, 98);
@@ -67,6 +89,7 @@ header div:nth-child(2){
     min-height: 650px;
     display: flex;
     flex-direction: row;
+    margin-top: 80px;
 }
 #section-1 div{
     min-height: 100px;
