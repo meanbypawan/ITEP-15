@@ -1,0 +1,19 @@
+1️⃣ Student Management System
+
+Scenario:
+A college wants to maintain student data with roll number, name, email, and date of admission.
+
+Tasks:
+
+Create Student entity.
+
+Configure Hibernate with MySQL.
+
+Perform CRUD (Insert, Update, Delete, Fetch All).
+
+Use HQL to fetch students by name or email.
+
+Add validation to avoid duplicate email.
+
+🎯 Concepts:
+Hibernate configuration, @Entity, @Id, CRUD operations, HQL, transactions.
