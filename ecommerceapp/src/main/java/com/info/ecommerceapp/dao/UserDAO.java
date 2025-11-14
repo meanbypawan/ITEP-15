@@ -11,6 +11,17 @@ import com.info.ecommerceapp.util.PasswordHashUtil;
 import jakarta.persistence.TypedQuery;
 
 public class UserDAO {
+  public static User findById(int userId) {
+	  User user = null;
+	  SessionFactory sessionFactory = HibernateUtil.getFactory();
+	  try(Session session = sessionFactory.openSession();) {
+		user =  session.get(User.class, userId);  
+	  }
+	  catch(Exception e) {
+		  e.printStackTrace();
+	  }
+	  return user;
+  }
   public static boolean authenticate(User user) {
 	  SessionFactory sessionFactory = HibernateUtil.getFactory();
 	  try (Session session = sessionFactory.openSession();){

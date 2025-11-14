@@ -31,7 +31,7 @@ public class DataConvertor implements AttributeConverter<String, String> {
 	@Override
 	public String convertToEntityAttribute(String dbData) {
 		try {
-			if (dbData == null)
+			if(dbData == null)
 				return null;
 			Cipher cipher = Cipher.getInstance(ALGORITHM);
 			SecretKeySpec certificate = new SecretKeySpec(KEY.getBytes(), ALGORITHM);

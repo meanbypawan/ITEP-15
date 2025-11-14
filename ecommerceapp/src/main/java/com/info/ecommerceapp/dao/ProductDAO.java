@@ -5,25 +5,26 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 import com.info.ecommerceapp.entity.Category;
+import com.info.ecommerceapp.entity.Product;
 import com.info.ecommerceapp.util.HibernateUtil;
 
-public class CategoryDAO {
-   public static Category findById(int id) {
-	   Category c = null;
-	   SessionFactory sessionFactory = HibernateUtil.getFactory();
-	   try (Session session = sessionFactory.openSession();){
-		 c =  session.get(Category.class, id);
+public class ProductDAO {
+	public static Product findById(int id) {
+		   Product p = null;
+		   SessionFactory sessionFactory = HibernateUtil.getFactory();
+		   try (Session session = sessionFactory.openSession();){
+			 p =  session.get(Product.class, id);
+		   }
+		   catch(Exception e) {
+			   e.printStackTrace();
+		   }
+		   return p;
 	   }
-	   catch(Exception e) {
-		   e.printStackTrace();
-	   }
-	   return c;
-   }
-   public static boolean save(Category category) {
+   public static boolean save(Product p) {
 	   SessionFactory sessionFactory = HibernateUtil.getFactory();
 	   try (Session session = sessionFactory.openSession();){
 		   Transaction transaction = session.beginTransaction();
-		   session.persist(category);
+		   session.persist(p);
 		   transaction.commit();
 		   return true;
 	   }

@@ -2,9 +2,12 @@ package com.info.ecommerceapp;
 
 import java.util.Scanner;
 
+import com.info.ecommerceapp.dao.CartDAO;
 import com.info.ecommerceapp.dao.CategoryDAO;
+import com.info.ecommerceapp.dao.ProductDAO;
 import com.info.ecommerceapp.dao.UserDAO;
 import com.info.ecommerceapp.entity.Category;
+import com.info.ecommerceapp.entity.Product;
 import com.info.ecommerceapp.entity.User;
 
 public class App {
@@ -15,6 +18,7 @@ public class App {
 			System.out.println("Press 2 for user login");
 			System.out.println("Press 3 for saving product");
 			System.out.println("Press 4 for saving category");
+			System.out.println("Press 5 for add product into cart");
 			System.out.println("Press 0 for exit");
 			System.out.println("Enter your choice");
 			int choice = sc.nextInt();
@@ -55,6 +59,25 @@ public class App {
                     break;
 				case 3:
 					System.out.println("Enter product title");
+					String title = sc.next();
+					System.out.println("Enter product price");
+					int price = sc.nextInt();
+					System.out.println("Enter categor Id");
+					int categoryId = sc.nextInt();
+					Category category =  CategoryDAO.findById(categoryId);
+					
+					if(category!=null) {
+						Product p = new Product();
+						p.setTitle(title);
+						p.setCategory(category);
+						p.setPrice(price);
+						if(ProductDAO.save(p))
+							System.out.println("Product saved...");
+						else
+							System.out.println("Something wrong..");
+					}
+					else
+						System.out.println("Category not found...");
 					break;    
 				case 4: 
 					System.out.println("Enter category name");
@@ -65,10 +88,23 @@ public class App {
 						System.out.println("Category saved..");
 					else
 						System.out.println("Something wrong...");
-					break;		
+					break;
+				case 5: System.out.println("Enter user id");
+				        int userId = sc.nextInt();
+				        System.out.println("Enter product id");
+				        int productId = sc.nextInt();
+				        
+				       String message =  CartDAO.addToCart(userId, productId);
+				       System.out.println(message);
+				       break;
 				case 0:
 					System.exit(0);
 			}
 		}
 	}
 }
+
+
+
+
+
