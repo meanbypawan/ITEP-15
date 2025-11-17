@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.1" xmlns="https://jakarta.ee/xml/ns/persistence">
+
+  <!-- persistence-unit name must match the one used in your Java code -->
+  <persistence-unit name="my-persistence-unit" transaction-type="RESOURCE_LOCAL">
+
+    <!-- JPA provider (Hibernate 6 as JPA implementation) -->
+    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+    <!-- List all your entity classes -->
+    <class>com.info.jpaapp.entity.User</class> 
+    <properties>
+      <!-- JDBC connection properties -->
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+      <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testjpadb"/>
+      <property name="jakarta.persistence.jdbc.user" value="root"/>
+      <property name="jakarta.persistence.jdbc.password" value=""/>
+
+      <!-- Hibernate-specific properties -->
+      <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+      <property name="hibernate.hbm2ddl.auto" value="update"/>
+      <property name="hibernate.show_sql" value="true"/>
+      <property name="hibernate.format_sql" value="true"/>
+
+    </properties>
+  </persistence-unit>
+</persistence>
+         
