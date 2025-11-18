@@ -1,8 +1,12 @@
 package com.info.ecommerceapp.entity;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
 import com.info.ecommerceapp.util.DataConvertor;
 import com.info.ecommerceapp.util.PasswordHashUtil;
 
+import jakarta.persistence.Cacheable;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Convert;
@@ -17,6 +21,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
+
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

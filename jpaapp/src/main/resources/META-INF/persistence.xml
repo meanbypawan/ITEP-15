@@ -8,20 +8,26 @@
     <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 
     <!-- List all your entity classes -->
-    <class>com.info.jpaapp.entity.User</class> 
+    <class>com.info.jpaapp.entity.User</class>
+    <class>com.info.jpaapp.entity.StudentCourse</class> 
     <properties>
       <!-- JDBC connection properties -->
       <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
       <property name="jakarta.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/testjpadb"/>
       <property name="jakarta.persistence.jdbc.user" value="root"/>
       <property name="jakarta.persistence.jdbc.password" value=""/>
-
+      
       <!-- Hibernate-specific properties -->
       <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
       <property name="hibernate.hbm2ddl.auto" value="update"/>
       <property name="hibernate.show_sql" value="true"/>
       <property name="hibernate.format_sql" value="true"/>
-
+      
+      <!-- Enabling second level cache -->
+      <property name="cache.use_second_level_cache" value="true"/>
+      <property name="hibernate.cache.use_query_cache" value="true"/>
+      <property name="cache.region.factory_class" value="org.hibernate.cache.jcache.internal.JCacheRegionFactory"/>
+      <property name="hibernate.javax.cache.provider" value="org.ehcache.jsr107.EhcacheCachingProvider"/>
     </properties>
   </persistence-unit>
 </persistence>

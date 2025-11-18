@@ -1,5 +1,9 @@
 package com.info.jpaapp.entity;
 
+import org.hibernate.annotations.Cache;
+import org.hibernate.annotations.CacheConcurrencyStrategy;
+
+import jakarta.persistence.Cacheable;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -8,6 +12,9 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "users")
+@Cacheable
+@Cache(usage = CacheConcurrencyStrategy.READ_ONLY)
+
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)

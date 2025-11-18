@@ -27,6 +27,18 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.22</version>
 		</dependency>
+		<dependency>
+			<groupId>org.hibernate.orm</groupId>
+			<artifactId>hibernate-jcache</artifactId>
+			<version>6.6.8.Final</version>
+		</dependency>
+
+		<!-- Ehcache 3 (works without classifier on Jakarta too) -->
+		<dependency>
+			<groupId>org.ehcache</groupId>
+			<artifactId>ehcache</artifactId>
+			<version>3.9.9</version>
+		</dependency>
 
 		<dependency>
 			<groupId>junit</groupId>
