@@ -1,0 +1,45 @@
+Problem: Library Management – Books Under a Category
+
+Use JPA
+
+A library wants to organize books into categories.
+Each Category can have multiple Books, but each Book belongs to only one Category.
+
+Requirements
+
+Create Category entity:
+
+id
+
+name
+
+description
+
+Create Book entity:
+
+id
+
+title
+
+author
+
+price
+
+category (Many-To-One)
+
+Relationship:
+
+Category   1  -----  *  Book
+
+
+Operations:
+
+Add a category with multiple books (at least 3).
+
+Fetch a category and list all books under it.
+
+Delete a book without deleting the category.
+
+Delete a category and ensure all its books get deleted.
+
+Update book details of a category.
