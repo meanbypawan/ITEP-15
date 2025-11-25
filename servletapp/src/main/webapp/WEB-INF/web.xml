@@ -1,0 +1,39 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <context-param>
+    <param-name>Global_Message</param-name>
+    <param-value>Java Is Very Simple</param-value>
+  </context-param>
+  <context-param>
+    <param-name>Global_Message_2</param-name>
+    <param-value>Jai Shree Ram</param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>FirstServlet</servlet-name>
+    <servlet-class>com.info.serveletapp.controller.FirstServlet</servlet-class>
+    <init-param>
+      <param-name>m1</param-name>
+      <param-value>Good Morning</param-value>
+    </init-param>
+    <init-param>
+      <param-name>m2</param-name>
+      <param-value>Good Evening</param-value>
+    </init-param>
+  </servlet> 
+  <servlet>
+    <servlet-name>SecondServlet</servlet-name>
+    <servlet-class>com.info.serveletapp.controller.SecondServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FirstServlet</servlet-name>
+    <url-pattern>/FirstServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>SecondServlet</servlet-name>
+    <url-pattern>/s</url-pattern>
+  </servlet-mapping>
+</web-app>
