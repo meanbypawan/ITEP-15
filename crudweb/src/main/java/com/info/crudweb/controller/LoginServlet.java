@@ -5,6 +5,8 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -31,6 +33,9 @@ public class LoginServlet extends HttpServlet {
 	    admin.setPassword(password);
 	    PrintWriter out = response.getWriter();
 	    if(AdminDAO.authenticate(admin)) {
+	    	HttpSession session =  request.getSession();
+	    	session.setAttribute("currentUserEmail", email);
+	    	session.setAttribute("isLoggedIn", true);
 	    	response.sendRedirect("dashboard.html");
 	    }
 	    else {
