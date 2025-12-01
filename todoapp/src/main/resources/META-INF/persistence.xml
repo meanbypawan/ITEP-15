@@ -9,6 +9,9 @@
    
     <!-- List all your entity classes -->
     <class>com.info.todoapp.entity.Admin</class>
+    <class>com.info.todoapp.entity.Category</class>
+    <class>com.info.todoapp.entity.User</class>
+    <class>com.info.todoapp.entity.Task</class>
     <properties>
       <!-- JDBC connection properties -->
       <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
