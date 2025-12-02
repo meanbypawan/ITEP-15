@@ -10,7 +10,7 @@
   <div class="container mt-3">
     <form action="controller/add_category.jsp" method="post">
       <input type="text" name="categoryName" class="form-control" placeholder="Enter task category"/>
-      <button class="mt-3 btn btn-outline-success" type="submit">Add task</button>
+      <button class="mt-3 btn btn-outline-success" type="submit">Add category</button>
     </form>
   </div>
 </body>

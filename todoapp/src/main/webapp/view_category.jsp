@@ -28,7 +28,11 @@
         	<tr>
         	  <td><%=sNo++%></td>
         	  <td><%=c.getCategoryName()%></td>
-        	  <td><button class="btn btn-outline-primary">Edit</button></td>
+        	  <td>
+        	   <a href="edit_category.jsp?id=<%=c.getId()%>">
+        	     <button class="btn btn-outline-primary">Edit</button>
+        	   </a>
+        	  </td>
         	  <td>
         	    <a href="controller/delete_category.jsp?id=<%=c.getId()%>" onclick="return confirm('Are you sure ?')">
         	      <button class="btn btn-outline-danger">Delete</button>

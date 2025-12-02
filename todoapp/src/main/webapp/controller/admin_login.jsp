@@ -7,9 +7,12 @@ String methodType = request.getMethod();
 if (methodType.equalsIgnoreCase("POST")) {
 	try {
 		admin = AdminDAO.authenticate(admin);
-		if (admin != null)
-      	  response.sendRedirect("../dashboard.jsp");
-		else
+		if (admin != null){
+      	  session.setAttribute("currentUser",admin.getEmail());
+      	  session.setAttribute("isLoggedIn",true);
+		  response.sendRedirect("../dashboard.jsp");
+		}
+      	else
 	      out.print("Login failed...");
 	} catch (Exception e) {
 		e.printStackTrace();

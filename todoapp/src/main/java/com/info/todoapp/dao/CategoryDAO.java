@@ -12,6 +12,38 @@ import jakarta.persistence.EntityTransaction;
 import jakarta.persistence.TypedQuery;
 
 public class CategoryDAO {
+  public static boolean update(Category c) {
+	  EntityManagerFactory factory = JPAUtil.getFactory();
+	  EntityTransaction transaction = null;
+	  try(EntityManager manager = factory.createEntityManager();) {
+		  transaction = manager.getTransaction();
+		  transaction.begin();
+		  Category dbCategory =  manager.find(Category.class, c.getId());
+	      if(dbCategory == null)
+	    	  return false;
+		  dbCategory.setCategoryName(c.getCategoryName());
+	      manager.persist(dbCategory);
+	      transaction.commit();
+	      return true;
+	  }
+	  catch(Exception e) {
+		  if(transaction != null && transaction.isActive())
+			  transaction.rollback();
+		  e.printStackTrace();
+		  throw new RuntimeException(e.getMessage());
+	  }
+  }
+  public static Category findById(Category category) {
+	  EntityManagerFactory factory = JPAUtil.getFactory();
+	  try(EntityManager manager = factory.createEntityManager();) {
+		 Category c =  manager.find(Category.class, category.getId());
+	     return c;
+	  }
+	  catch(Exception e) {
+		  e.printStackTrace();
+		  throw new RuntimeException(e.getMessage());
+	  }
+  }
   public static boolean delete(Category category) {
 	  EntityManagerFactory factory = JPAUtil.getFactory();
 		EntityTransaction transaction = null;

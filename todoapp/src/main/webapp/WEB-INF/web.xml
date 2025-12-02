@@ -3,5 +3,16 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <filter>
+    <filter-name>AuthFilter</filter-name>
+    <filter-class>com.info.todoapp.util.AuthFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthFilter</filter-name>
+    <url-pattern>/dashboard.jsp</url-pattern>
+    <url-pattern>/add_category.jsp</url-pattern>
+    <url-pattern>/add_task.jsp</url-pattern>
+    <url-pattern>/edit_category.jsp</url-pattern>
+    <url-pattern>/view_category.jsp</url-pattern>
+  </filter-mapping>
 </web-app>

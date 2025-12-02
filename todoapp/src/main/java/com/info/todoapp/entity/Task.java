@@ -8,6 +8,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import jakarta.persistence.Transient;
 
 @Entity
 @Table(name = "tasks")
@@ -32,6 +33,19 @@ public class Task {
 	@ManyToOne
 	@JoinColumn(name = "category_id")
 	private Category category;
+    
+	@Transient
+	private int categoryId;
+	
+	
+	
+	public int getCategoryId() {
+		return categoryId;
+	}
+
+	public void setCategoryId(int categoryId) {
+		this.categoryId = categoryId;
+	}
 
 	public int getId() {
 		return id;
