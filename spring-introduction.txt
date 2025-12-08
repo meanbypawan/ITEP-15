@@ -1,0 +1,49 @@
+Spring :-
+ 1. It is open source Java Framework
+ 2. We can develop Standalone & Enterprise application
+ 3. Initial Release in 2003
+ 4. First production release in 2004 version 1.0
+ 5. It is developed by "Rod Jhonson"
+-----------------------------------------------------------------------------
+Advantages of Spring :-
+ 1. Modular and lightweight :- Spring follow modular architecture, allowing developers to use only
+    the components they need, making application more lightweight and easier to maintain.
+ 2. Flexible configuration :-
+     Support multiple configuration options
+     XML Configuration
+     Java based Configuration
+     Annotation based configuration
+ 3. DI :- Spring support DI, which simplifies the management of component dependecies, making
+    code more testable and adaptable to changes.
+ 4. Simplified database access :- Spring JDBC and Object Relational Mapping support 
+    simplifies database access, reduces boilerplate code and improve data access efficiency.
+ 5. Security :- Spring security provides robust framework for implementing authentication and
+    authorization, making it easier to secure web application and services.
+ 6. Scalability :- Spring application can be designed for scalability and can easily integrate with
+    cloud native techology and microserives architecuture.
+ 7. Open source.      
+ -----------------------------------------------------------------------------------------------------------------
+ Core component Of Spring :-
+  Spring Container ;- It is core component of Spring. It is responsible to hanle Spring App.
+  Responsibility :-
+   1. Manage Bean Objects
+   2. Manage Bean Life Cycle.
+   3. Dependency Injection
+   4. Provide AOP Support
+   5. Transaction Management
+   6. I18N [Internationalization]
+      etc.
+-----------------------------------------------------
+Types of Container :-
+ 1. BeanFactory :- Outdated , Out of fashion
+ 2. ApplicationContext[Interface]  :- Current Trend
+ 
+            
+            
+            
+            
+            
+            
+            
+            
+            
