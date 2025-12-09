@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   <bean class="com.info.testdi.entity.Customer" id="customer2">
+      <constructor-arg value="2000" index="0" type="int"/>
+      <constructor-arg value="Peeku" index="1" type="java.lang.String"/>
+      <constructor-arg value="30" index="2" type="int"/>
+   </bean> 
+   <bean class="com.info.testdi.entity.Customer" id="customer">
+      <property name="id" value="1000"/>
+      <property name="name" value="Cheeku"/>
+      <property name="age" value="29"/>
+   </bean>
+</beans>

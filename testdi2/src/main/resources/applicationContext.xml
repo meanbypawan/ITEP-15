@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+   <bean class="com.info.testdi.entity.Employee" id="emp">
+     <property name="id" value="1000"/>
+     <property name="name" value="Atul"/>
+     <property name="addressList">
+        <list>
+          <value>Address Line 1 : 800, 51, Indore</value>
+          <value>Address Line 2 : 700, Rajmohalla</value>
+        </list>
+     </property>
+     <property name="phoneList">
+       <set>
+         <value>9009111222</value>
+         <value>9009111333</value>
+       </set>
+     </property>
+     <property name="projectList">
+        <map>
+          <entry key="John" value="Jhonson Ice-cream"/>
+          <entry key="Hari" value="Instagram App"></entry>
+        </map>
+     </property>
+   </bean>
+   <bean class="com.info.testdi.entity.NomineeDetails" id="nominee1" autowire-candidate="false">
+      <property name="name" value="Chinky"/>
+      <property name="contact" value="9009111222"/>
+   </bean>
+   <bean class="com.info.testdi.entity.NomineeDetails" id="nominee2">
+      <property name="name" value="Pinky"/>
+      <property name="contact" value="9009111333"/>
+   </bean>
+   <bean class="com.info.testdi.entity.Customer" id="customer" autowire="byType">
+      <property name="id" value="1000"/>
+      <property name="name" value="Cheeku"/>
+      <property name="age" value="29"/>
+   </bean>
+</beans>
