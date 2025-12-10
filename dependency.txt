@@ -43,4 +43,16 @@
 <property name="cache.user_second_level_cache">true</property>
 <property name="cache.region.factory_class">org.hibernate.cache.jcache.internal.JCacheRegionFactory</property>
 <property name="hibernate.javax.cache.provider">org.ehcache.jsr107.EhcacheCachingProvider</property>
-
+------------------------------------------------
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-context -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-context</artifactId>
+    <version>6.2.11</version>
+</dependency>
+<!-- https://mvnrepository.com/artifact/org.springframework/spring-jdbc -->
+<dependency>
+    <groupId>org.springframework</groupId>
+    <artifactId>spring-jdbc</artifactId>
+    <version>6.2.11</version>
+</dependency>

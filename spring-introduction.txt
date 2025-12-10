@@ -37,7 +37,73 @@ Advantages of Spring :-
 Types of Container :-
  1. BeanFactory :- Outdated , Out of fashion
  2. ApplicationContext[Interface]  :- Current Trend
- 
+ -----------------------------------------------------------------------
+ Some Important Annotation :-
+ 1️⃣ @Bean
+
+Declares a method as a bean producer.
+
+The object returned is registered in the Spring context.
+
+Used in Java configuration (@Configuration) for manual bean creation.
+
+2️⃣ @Configuration
+
+Marks a class as a Spring configuration class (replacement for XML).
+
+Spring scans this class for @Bean methods and registers them in the context.
+
+3️⃣ @ComponentScan
+
+Tells Spring which packages to scan for components annotated with @Component, @Service, @Repository, @Controller.
+
+Enables automatic detection of beans without manual @Bean creation.
+
+4️⃣ @Repository
+
+Marks a class as DAO / data access layer.
+
+Spring registers it as a bean automatically.
+
+Enables exception translation, converting JDBC exceptions to Spring’s DataAccessException.
+
+5️⃣ @EnableTransactionManagement
+
+Enables annotation-driven transaction management in Spring.
+
+Required for @Transactional to work.
+
+6️⃣ @Transactional
+
+Marks a method or class as transactional.
+
+Spring automatically handles commit and rollback.
+
+Best practice: Apply on service layer, not DAO.
+
+Rollback occurs automatically for RuntimeException; for checked exceptions, specify rollbackFor.
+
+7️⃣ @Service
+
+Marks a class as a service / business layer component.
+
+Detected by component scanning.
+
+Typically contains business logic and transaction management.
+
+8️⃣ @Autowired
+
+Marks a field, constructor, or setter for automatic dependency injection.
+
+Rules:
+
+Field injection: easy but less testable.
+
+Constructor injection: preferred, especially for final fields.
+
+Setter injection: optional if using default constructor.
+
+If multiple constructors exist, annotate one constructor with @Autowired.
             
             
             
