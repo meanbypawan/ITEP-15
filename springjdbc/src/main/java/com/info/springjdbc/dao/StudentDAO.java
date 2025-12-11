@@ -1,9 +1,12 @@
 package com.info.springjdbc.dao;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import com.info.springjdbc.entity.Student;
+import com.info.springjdbc.mapper.StudentRowMapper;
 
 public class StudentDAO {
   
@@ -24,5 +27,20 @@ public class StudentDAO {
       return template.update(sql,id) > 0;
   }
 
-
+  public List<Student> getList(){
+	  List<Student> list =  template.query("select * from student", new StudentRowMapper());
+      return list;
+  }
+  
+  public Student getStudentById(int id) {
+	 String sql = "select * from student where id = ?";
+	 Student s =  template.queryForObject(sql,new Object[] {id},new StudentRowMapper());
+     return s;
+  }
 }
+
+
+
+
+
+

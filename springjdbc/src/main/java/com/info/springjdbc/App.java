@@ -1,5 +1,6 @@
 package com.info.springjdbc;
 
+import java.util.List;
 import java.util.Scanner;
 
 import org.springframework.context.ApplicationContext;
@@ -16,6 +17,8 @@ public class App {
 				System.out.println("Press 1 for insert");
 				System.out.println("Press 2 for update");
 				System.out.println("Press 3 for delete");
+				System.out.println("Press 4 for fetch students");
+				System.out.println("Press 5 for fetch by id");
 				System.out.println("Press 0 for exit");
 				System.out.println("Enter your choice");
 				int choice = sc.nextInt();
@@ -27,12 +30,39 @@ public class App {
 					updateStudent();
 				else if (choice == 3)
 					deleteStudent();
+				else if(choice == 4)
+					fetchStudents();
+				else if(choice == 5)
+					fetchById();
 			}
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
 	}
-
+	private static void fetchById() {
+		try {
+			ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+			StudentDAO dao =  context.getBean(StudentDAO.class);
+		    Student s =  dao.getStudentById(1);
+	    	System.out.println(s.getId()+"  "+s.getName()+"  "+s.getCourse());
+	    	
+		}
+		catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+    private static void fetchStudents() {
+    	try {
+    		ApplicationContext context = new AnnotationConfigApplicationContext(JavaConfig.class);
+    		StudentDAO dao =  context.getBean(StudentDAO.class);
+    	    List<Student> list = dao.getList();
+    	    for(Student s : list)
+    	    	System.out.println(s.getId()+"  "+s.getName()+"  "+s.getCourse());
+    	}
+    	catch(Exception e) {
+    		e.printStackTrace();
+    	}
+    }
 	private static void updateStudent() {
 		try {
 			Scanner sc = new Scanner(System.in);
