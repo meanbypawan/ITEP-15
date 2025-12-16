@@ -6,8 +6,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 @Controller
 public class HomeController {
   // http://localhost:8080/testmvc/home ---> GET/POST/PUT/DELETE
-  @GetMapping("/home")	
+  @GetMapping({"/home","/"})	
   public String getHomePage() {
 	  return "home";
+  }
+  @GetMapping("/create-new-account")
+  public String getCreateAccountPage() {
+	  return "create-account";
   }
 }
