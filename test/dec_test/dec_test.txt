@@ -1,0 +1,110 @@
+REST API ENDPOINTS :-
+1️⃣ Create Student
+
+Method: POST
+
+Route: /api/students
+
+Input: JSON body (name, email, phone)
+
+Purpose: Register a new student
+
+2️⃣ Get All Students
+
+Method: GET
+
+Route: /api/students
+
+Input: Optional query params (page, size)
+
+Purpose: Fetch all students with pagination
+
+3️⃣ Get Student by ID
+
+Method: GET
+
+Route: /api/students/{studentId}
+
+Input: Path variable studentId
+
+Purpose: Fetch a specific student
+
+4️⃣ Update Student
+
+Method: PUT
+
+Route: /api/students/{studentId}
+
+Input: Path variable + JSON body
+
+Purpose: Update student details
+
+5️⃣ Deactivate Student
+
+Method: PATCH
+
+Route: /api/students/{studentId}/deactivate
+
+Input: Path variable studentId
+
+Purpose: Disable a student account
+
+6️⃣ Delete Student
+
+Method: DELETE
+
+Route: /api/students/{studentId}
+
+Input: Path variable studentId
+
+Purpose: Permanently delete a student
+
+7️⃣ Create Course
+
+Method: POST
+
+Route: /api/courses
+
+Input: JSON body (title, duration, level)
+
+Purpose: Add a new course
+
+8️⃣ Get All Courses
+
+Method: GET
+
+Route: /api/courses
+
+Input: Optional query param (level)
+
+Purpose: Fetch all courses or filter by level
+
+9️⃣ Get Course by ID
+
+Method: GET
+
+Route: /api/courses/{courseId}
+
+Input: Path variable courseId
+
+Purpose: Fetch course details
+
+🔟 Update Course Status
+
+Method: PATCH
+
+Route: /api/courses/{courseId}/status
+
+Input: Path variable + query param (status)
+
+Purpose: Activate or deactivate a course
+
+1️⃣1️⃣ Delete Course
+
+Method: DELETE
+
+Route: /api/courses/{courseId}
+
+Input: Path variable courseId
+
+Purpose: Remove a course
