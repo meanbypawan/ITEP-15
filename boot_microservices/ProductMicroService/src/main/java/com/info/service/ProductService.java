@@ -50,7 +50,7 @@ public class ProductService {
 		 p.setShippingInformation(dto.getShippingInformation());
 		 p.setDiscountPercentage(dto.getDiscountPercentage());
 		 p.setThumbnail(dto.getThumbnail());
-		 
+		 p.setCategory(dto.getCategory());
 		 List<ReviewsDTO> reviewsDTOList =  dto.getReviews();
 	     List<Reviews> reviewsList = new ArrayList<>();
 	     for(ReviewsDTO reviewDTO : reviewsDTOList) {
@@ -79,6 +79,48 @@ public class ProductService {
 	  List<Product>dbProductList =  productRepo.saveAll(productList);
 	  hm.put("message", "All product saved");
 	  return hm;
+  }
+  public List<ProductDTO> getProductByCategory(String categoryName) {
+	 List<Product> list =  productRepo.findByCategory(categoryName);
+     List<ProductDTO> dtoList = new ArrayList<>();
+     
+     for(Product p : list) {
+    	 ProductDTO dto = new ProductDTO();
+    	 dto.setId(p.getId());
+    	 dto.setTitle(p.getTitle());
+    	 dto.setPrice(p.getPrice());
+    	 dto.setDiscountPercentage(p.getDiscountPercentage());
+    	 dto.setBrand(p.getBrand());
+    	 dto.setWarrantyInformation(p.getWarrantyInformation());
+    	 dto.setShippingInformation(p.getShippingInformation());
+    	 dto.setAvailabilityStatus(p.getAvailabilityStatus());
+    	 dto.setDescription(p.getDescription());
+    	 dto.setStock(p.getStock());
+    	 dto.setThumbnail(p.getThumbnail());
+    	 List<String> dtoImageList = new ArrayList<>();
+    	 List<Images> imagesList =  p.getImages();
+         for(Images img : imagesList) {
+        	 dtoImageList.add(img.getImageUrl());
+         }
+         dto.setImages(dtoImageList);
+         
+         List<Reviews> reviewsList =  p.getReviews();
+         List<ReviewsDTO> dtoReviewList = new ArrayList<>();
+         
+         for(Reviews r : reviewsList) {
+        	 ReviewsDTO reviewDTO = new ReviewsDTO();
+        	 reviewDTO.setComment(r.getComment());
+        	 reviewDTO.setDate(r.getDate());
+        	 reviewDTO.setId(r.getId());
+        	 reviewDTO.setReviewerEmail(r.getReviewerEmail());
+        	 reviewDTO.setReviewerName(r.getReviewerName());
+        	 reviewDTO.setRating(r.getRating());
+        	 dtoReviewList.add(reviewDTO);
+         }
+         dto.setReviews(dtoReviewList);
+         dtoList.add(dto);
+     }
+     return dtoList;
   }
 }
 

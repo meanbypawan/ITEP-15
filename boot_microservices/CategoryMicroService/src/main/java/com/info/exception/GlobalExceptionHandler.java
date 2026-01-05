@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 public class GlobalExceptionHandler {
    @ExceptionHandler(Exception.class)
    public ResponseEntity<String> handleInternalServer(Exception e){
+	   e.printStackTrace();
 	   return ResponseEntity.internalServerError().body(e.getMessage());
    }
 }

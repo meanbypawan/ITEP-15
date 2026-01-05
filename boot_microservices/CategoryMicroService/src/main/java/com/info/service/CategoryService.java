@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.info.dto.CategoryDTO;
 import com.info.entity.Category;
 import com.info.externalservice.CategoryClient;
+import com.info.externalservice.ProductMicroServiceClient;
 import com.info.repo.CategoryRepo;
 
 import jakarta.transaction.Transactional;
@@ -16,9 +17,11 @@ import jakarta.transaction.Transactional;
 public class CategoryService {
   private CategoryRepo categoryRepo;
   private CategoryClient categoryClient;
-  public CategoryService(CategoryRepo categoryRepo, CategoryClient categoryClient) {
+  private ProductMicroServiceClient productClient;
+  public CategoryService(CategoryRepo categoryRepo, CategoryClient categoryClient, ProductMicroServiceClient productClient) {
 	  this.categoryRepo = categoryRepo;
 	  this.categoryClient = categoryClient;
+	  this.productClient = productClient;
   }
   
   @Transactional
@@ -38,6 +41,9 @@ public class CategoryService {
   
   public List<Category> getList(){
 	  return categoryRepo.findAll();
+  }
+  public List<Object> getProductByCategory(String categoryName){
+	 return productClient.getProductByCategory(categoryName);
   }
 }
 
