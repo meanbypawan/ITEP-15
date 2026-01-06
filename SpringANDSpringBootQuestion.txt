@@ -1,0 +1,330 @@
+You can use this for 2–8 years experience interviews.
+
+🔷 PART 1: CORE SPRING INTERVIEW QUESTIONS
+🔹 Basic Spring Questions
+1. What is Spring Framework?
+
+Lightweight Java framework
+
+Provides IoC, DI, AOP, MVC, Transaction Management
+
+Reduces boilerplate code
+
+2. What is Inversion of Control (IoC)?
+
+Control of object creation is transferred from developer to Spring container
+
+Example:
+
+@Autowired
+UserService userService;
+
+3. What is Dependency Injection?
+
+Injecting dependencies instead of creating them manually
+
+Types:
+
+Constructor injection ✅ (recommended)
+
+Setter injection
+
+Field injection ❌
+
+4. Difference between BeanFactory and ApplicationContext?
+BeanFactory	ApplicationContext
+Lazy loading	Eager loading
+Lightweight	Feature-rich
+No event support	Event support
+5. What is a Spring Bean?
+
+An object managed by Spring container
+
+6. Bean Scopes in Spring?
+
+singleton (default)
+
+prototype
+
+request
+
+session
+
+application
+
+7. What is @Component, @Service, @Repository?
+
+@Component → generic
+
+@Service → business logic
+
+@Repository → DAO + exception translation
+
+🔹 Intermediate Spring Questions
+8. What is AOP?
+
+Aspect Oriented Programming
+
+Separates cross-cutting concerns
+
+Examples:
+
+Logging
+
+Security
+
+Transactions
+
+9. What is @Transactional?
+
+Manages database transactions
+
+Rollback on RuntimeException by default
+
+10. Difference between @Autowired and @Qualifier?
+
+@Autowired → inject by type
+
+@Qualifier → resolve ambiguity
+
+11. Spring MVC Request Flow?
+Client → DispatcherServlet → Controller → Service → DAO → DB
+
+🔷 PART 2: SPRING BOOT INTERVIEW QUESTIONS
+🔹 Basic Spring Boot Questions
+12. What is Spring Boot?
+
+Built on top of Spring
+
+Auto-configuration
+
+Embedded server
+
+Opinionated defaults
+
+13. Difference between Spring and Spring Boot?
+Spring	Spring Boot
+Manual config	Auto-config
+External server	Embedded server
+XML heavy	Annotation based
+14. What is Auto-Configuration?
+
+Spring Boot automatically configures beans based on:
+
+Classpath
+
+Properties
+
+Dependencies
+
+15. What is @SpringBootApplication?
+
+Combination of:
+
+@Configuration
+
+@EnableAutoConfiguration
+
+@ComponentScan
+
+16. What are Starters?
+
+Predefined dependency bundles
+Example:
+
+spring-boot-starter-web
+spring-boot-starter-security
+
+17. What is application.properties / yml?
+
+Central configuration file
+
+Environment specific configs supported
+
+🔹 Advanced Spring Boot Questions
+18. What is Actuator?
+
+Provides production-ready endpoints
+
+Examples:
+
+/actuator/health
+/actuator/metrics
+
+19. How does Spring Boot work internally?
+
+Reads classpath
+
+Loads auto-configuration
+
+Creates beans conditionally
+
+20. What is Profiles?
+
+Environment-based configuration
+
+spring.profiles.active=dev
+
+🔷 PART 3: MONOLITHIC ARCHITECTURE INTERVIEW QUESTIONS
+🔹 Basics
+21. What is Monolithic Architecture?
+
+Single codebase
+
+Single deployment
+
+All modules tightly coupled
+
+22. Advantages of Monolithic Architecture
+
+Simple development
+
+Easy deployment
+
+Less infrastructure
+
+23. Disadvantages of Monolithic Architecture
+
+Hard to scale
+
+Single point of failure
+
+Slow deployment
+
+Tight coupling
+
+24. When should monolith be used?
+
+Small teams
+
+Small applications
+
+Early startup phase
+
+25. Monolith vs Microservices?
+Monolith	Microservices
+Single deploy	Multiple deploys
+Tight coupling	Loose coupling
+Scale whole app	Scale per service
+🔷 PART 4: MICROSERVICE ARCHITECTURE INTERVIEW QUESTIONS
+🔹 Basics
+26. What are Microservices?
+
+Small, independent services
+
+Own database
+
+Communicate via REST / messaging
+
+27. Key Characteristics of Microservices
+
+Decentralized data
+
+Independent deployment
+
+Fault isolation
+
+28. Advantages of Microservices
+
+Scalability
+
+Faster deployment
+
+Technology flexibility
+
+29. Challenges of Microservices
+
+Distributed systems complexity
+
+Network latency
+
+Data consistency
+
+Monitoring & security
+
+🔹 Microservices Design Questions
+30. What is API Gateway?
+
+Single entry point
+
+Routing
+
+Authentication & Authorization
+
+Rate limiting
+
+31. What is Service Discovery?
+
+Dynamic location of services
+
+Examples:
+
+Eureka
+
+Consul
+
+Kubernetes DNS
+
+32. What is Circuit Breaker?
+
+Prevents cascading failures
+
+Example:
+
+Resilience4j
+
+33. What is Config Server?
+
+Centralized configuration
+
+Dynamic refresh
+
+34. Database per Microservice – why?
+
+Loose coupling
+
+Independent scaling
+
+Avoids shared DB issues
+
+🔹 Security & Communication
+35. How is security handled in microservices?
+
+JWT / OAuth2
+
+API Gateway security
+
+mTLS (advanced)
+
+36. Synchronous vs Asynchronous Communication?
+
+REST → sync
+
+Kafka / RabbitMQ → async
+
+37. What is Event-Driven Architecture?
+
+Services react to events
+
+Loose coupling
+
+🔹 Real-Time / Practical Questions
+38. How do you handle distributed transactions?
+
+Saga pattern
+
+Eventual consistency
+
+39. How do you monitor microservices?
+
+Centralized logging
+
+Metrics
+
+Distributed tracing
+
+40. Monolith to Microservice migration strategy?
+
+Strangler pattern
+
+Gradual extraction
