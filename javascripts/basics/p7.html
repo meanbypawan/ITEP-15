@@ -1,0 +1,15 @@
+<script>
+    // In Java :- byte,short,int,char,String
+    var x = NaN;
+    switch(true){
+        case 1==1:document.write("Matched.......");break;
+        case NaN:document.write("<br>NAN MATCHED");break;
+        case null:document.write("<br>Null MATCHED");break;
+        case undefined:document.write("<br>Undefined MATCHED");break;
+        case 1n: document.write("<br>BigInt MATCHED");break;
+        case true:document.write("<br>Boolean MATCHED");break;
+        case "hello":document.write("<br>String MATCHED");break;
+        case 1: document.write("<br>Number MATCHED");break;
+        default:document.write("Not Matched");
+    }
+</script>

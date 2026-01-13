@@ -1,0 +1,21 @@
+<script>
+    /* undefined v/s null
+    == , === , !=, !==
+    undefined :-  typeof(undefined) is undefined
+    
+    null :-  typeof(null) is object
+    */
+    document.write("<br>undefined == null : "+(undefined == null));
+    document.write("<br>undefined === null : "+(undefined === null));
+    document.write("<br>20 + undefine : "+(20+undefined)); // NaN
+    document.write("<br>20 + null : "+(20+null)); // 20
+    document.write("<br>undefine + null : "+(undefined+null));
+    document.write("<br>'20'+undefined : "+('20'+undefined));
+    document.write("<br>null+'20' : "+(null+"20"));
+    document.write("<br> 0 == null : "+(0 == null));
+    document.write("<br>false == 0 : "+(false == 0));
+    document.write("<br>20 + true : "+(20+true));
+    document.write("<br> 1 == true : "+(1 == true));
+    document.write("<br>NaN == NaN : "+(NaN == NaN)); // false
+    document.write("<br>NaN != NaN : "+(NaN != NaN));
+</script>
