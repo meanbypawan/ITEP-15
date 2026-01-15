@@ -1,0 +1,21 @@
+<script>
+  let arr = [1,2,3,4,5,6,7,8,9,10];
+
+  let output = arr.map((element)=>{return element*element});
+  
+  let element = arr.find((element)=>{return element == 5});
+  document.write(element);
+
+  let status = arr.some((element)=>{return element == 55});
+  document.write(status);
+  /*
+  document.write("<br>"+output);
+  
+  let arr2 = [10,20,30,40,50];
+  document.write("<br>"+arr2.length);
+  delete arr2[2];
+  document.write("<br>"+arr2.length);
+  for(let index in arr2)
+    document.write("<br>"+arr2[index]+" "+index);
+  */
+</script>
