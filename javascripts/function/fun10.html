@@ -1,0 +1,32 @@
+<script>
+    class Operation{
+        #firstValue;
+        #secondValue;
+        constructor(firstValue,secondValue){
+            this.#firstValue = firstValue;
+            this.#secondValue = secondValue
+        }
+        addition(){
+            return this.#firstValue+this.#secondValue;
+        }
+        set firstValue(firstValue){
+            console.log("Setter called....");
+            this.#firstValue = firstValue;
+        }
+        get firstValue(){
+            console.log("Getter called....");
+            return this.#firstValue;
+        }
+        set secondValue(secondValue){
+           this.#secondValue = secondValue;
+        }
+        get secondValue(){
+            return this.#secondValue;
+        }
+    }
+
+    let obj = new Operation();
+    obj.firstValue = 20;
+    obj.secondValue =10;
+    console.log(obj.firstValue + obj.secondValue);
+</script>

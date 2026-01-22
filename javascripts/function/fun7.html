@@ -1,0 +1,19 @@
+<script>
+    /*
+        Employee : id,name,department,salary
+                   displayInfo() 
+    */
+   const emp = {
+    "id":100,
+    "name":"Atul",
+    "department":"Dev",
+    "salary":100000,
+    "displayInfo": function(){
+        console.log(`Id : ${this.id}`);
+        console.log(`Name : ${this.name}`);
+        console.log(`Department : `+this.department);
+        console.log(`Salary : ${this.salary}`);
+    }
+   };
+   emp.displayInfo();
+</script>

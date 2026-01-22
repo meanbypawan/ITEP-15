@@ -1,0 +1,10 @@
+<script>
+    let customer = {"id":100,"name":"Rahil","age":23};
+    // document.write("<br>Id : "+customer.id);
+    // document.write("<br>Name : "+customer["name"]);
+    // document.write("<br>Age : "+customer.age);
+    document.write("<br>"+customer.constructor.name);
+    for(let key in customer){
+        document.write("<br>"+key+" : "+customer[key]);
+    }
+</script>

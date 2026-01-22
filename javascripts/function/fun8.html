@@ -1,0 +1,18 @@
+<script>
+    function Employee(id,name,department,salary){
+       this.id = id;
+       this.name = name;
+       this.department = department;
+       this.salary;
+       this.displaryInfo = function(){
+        console.log("Id : "+this.id);
+        console.log("Name : "+this.name);
+        console.log("Department : "+this.department);
+        console.log("Salary : "+this.salary);
+       }
+    }
+
+    // emp: {id:100}
+    let emp = new Employee(100,"Atul","Developement",100000);
+    emp.displaryInfo();
+</script>

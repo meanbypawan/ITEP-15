@@ -1,0 +1,8 @@
+<script>
+    let arr1 = [[1,2],[3,4]];
+    let arr2 = JSON.stringify(arr1); // "[[1,2],[3,4]]"
+    arr2 = JSON.parse(arr2);
+    arr1[0].push(1000);
+    document.write("<br>"+arr1);
+    document.write("<br>"+arr2);
+</script>

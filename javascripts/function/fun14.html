@@ -1,0 +1,13 @@
+<script>
+    // error - callback
+    function f1(a,b,callback){
+       if(typeof(a)!="number" || typeof(b)!="number")
+        callback(new Error("Input are not number"));
+       else
+         callback(null,a+b);
+    }
+
+    f1(20,"10",function(err,result){
+        err ? console.log(err) : console.log(result);
+    });
+</script>

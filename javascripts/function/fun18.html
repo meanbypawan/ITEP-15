@@ -1,0 +1,33 @@
+<script>
+    const firstTask = (n,firstKaCallback)=>{
+        setTimeout(()=>{
+          console.log("First is done : "+n);
+          firstKaCallback(n+2);
+        },5000);
+    }
+    const secondTask = (n,secondKaCallback)=>{
+        setTimeout(()=>{
+            console.log("Second is done : "+n);
+            secondKaCallback(n+2);
+        },3000);
+    }
+    const thirdTask = (n,thirdKaCallback)=>{
+        setTimeout(()=>{
+            console.log("Third is done : "+n);
+            thirdKaCallback(n+2);
+        },2200);
+    }
+    const fouthTask = (n)=>{
+        setTimeout(()=>{
+            console.log("Fouth is done : "+n);
+        },5500)
+    }
+    firstTask(10,(n)=>{
+        secondTask(n,(n)=>{
+            thirdTask(n,(n)=>{
+                fouthTask(n);
+            });
+        });
+    });
+
+</script>

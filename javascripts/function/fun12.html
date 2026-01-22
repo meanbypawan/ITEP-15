@@ -1,0 +1,14 @@
+<script>
+    function f1(a){
+        return function(b){
+          return function(c){
+            return a * b * c;
+          }
+        }
+    }
+    let result = f1(2)(3)(4);
+    console.log(result);
+
+    result = f1(100)(200)(300);
+    console.log(result);
+</script>

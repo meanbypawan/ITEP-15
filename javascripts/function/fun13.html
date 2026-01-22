@@ -1,0 +1,19 @@
+<script>
+    function f1(a,b,evenOdd,posNeg){
+      let result = a + b;
+      console.log("Addition : "+result);
+      evenOdd(result);
+      posNeg(result);
+    }
+
+    f1(20,-40,function(n){
+      n%2 ? console.log("ODD") : console.log("EVEN");
+    },function(n){
+        if(n > 0)
+          console.log("+VE");
+        else if(n < 0)
+              console.log("-VE");
+             else
+              console.log("Neither +VE Nor -VE");
+    });
+</script>
