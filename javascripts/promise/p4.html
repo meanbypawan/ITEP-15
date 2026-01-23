@@ -1,0 +1,41 @@
+<script>
+    const firstTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside First : "+n);
+                reject(n+2);
+            },5000);
+        });
+    }
+    const secondTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside Second : "+n);
+                resolve(n+2);
+            },3000);
+        });
+    }
+    const thirdTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside Third : "+n);
+                reject(n+2);
+            },2500);
+        });
+    }
+    const fourthTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside Fourth : "+n);
+                resolve(n+2);
+            },4000);
+        });
+    }
+    firstTask(10).then(resolvedValue=>{return secondTask(resolvedValue)})
+    .then(resolvedValue=>{return thirdTask(resolvedValue)})
+    .then(resolvedValue=>{return fourthTask(resolvedValue)})
+    .catch(err=>{
+        console.log("First Wala Rejected...");
+        console.log(err)
+     });
+</script>

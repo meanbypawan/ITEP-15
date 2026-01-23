@@ -1,0 +1,46 @@
+<script>
+    const firstTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside First : "+n);
+                resolve(n+2);
+            },5000);
+        });
+    }
+    const secondTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside Second : "+n);
+                resolve(n+2);
+            },3000);
+        });
+    }
+    const thirdTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside Third : "+n);
+                resolve(n+2);
+            },2500);
+        });
+    }
+    const fourthTask = (n)=>{
+        return new Promise((resolve,reject)=>{
+            setTimeout(()=>{
+                console.log("Inside Fourth : "+n);
+                resolve(n+2);
+            },4000);
+        });
+    }
+    async function executeTask(){
+       try{ 
+        let result =  await firstTask(10);
+        result = await secondTask(result);
+        result = await thirdTask(result);
+        await fourthTask(result);
+       }
+       catch(err){
+        console.log(err);
+       } 
+    }
+    executeTask();
+</script>

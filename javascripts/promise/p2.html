@@ -1,0 +1,14 @@
+<script>
+    // axios, fetch
+    function evenOdd(n){
+        return new Promise((resolve,reject)=>{
+            n%2 ? reject("ODD") : resolve("EVEN");
+        });
+    }
+
+    evenOdd(11).then(resolvedValue=>{
+        console.log(resolvedValue)
+    }).catch(rejectedValue=>{
+        console.log(rejectedValue);
+    });
+</script>
