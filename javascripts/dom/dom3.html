@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <center>
+            <img id="main" src="./images//teddy.jpeg" width="200" height="200"/>
+            <br><br>
+            <button onclick="incrementSize()">+</button>
+            <button onclick="decrementSize()">-</button>
+        </center>
+        <script>
+            function incrementSize(){
+              let img = document.getElementById("main");
+              img.width = img.width*1 + 50;
+              img.height = img.height*1 + 50;
+            }
+            function decrementSize(){
+              let img = document.getElementById("main");
+              img.width = img.width*1 - 50;
+              img.height = img.height*1 - 50;
+            }
+        </script>
+    </body>
+</html>

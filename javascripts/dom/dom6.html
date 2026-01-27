@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <style>
+            input[type="text"]{
+                width: 90%;
+                padding: 10px;
+            }
+            button{
+                width: 8%;
+                padding: 10px;
+            }
+            #black-board{
+                background-color: black;
+                color: white;
+                height: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <input id="text" onkeyup="setText()"  type="text" placeholder="Enter some text"/>
+        <button onclick="setText()">Go</button>
+        <div id="black-board">
+        </div>
+        <script>
+            function setText(){
+                let input = document.querySelector("#text");
+                let divObj = document.querySelector("#black-board");
+                let data = input.value;
+                divObj.innerText = data; 
+            }
+        </script>
+    </body>
+</html>

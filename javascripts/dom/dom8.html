@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Table</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Student Records</h2>
+<button onclick="changeTheme('#25343F','#BFC9D1')">Blue Theme</button>
+<button onclick="changeTheme('#740A03','#280905')">Brown Theme</button>
+<button onclick="changeTheme('#628141','#40513B')">Green Theme</button>
+<table id="data">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Course</th>
+        <th>City</th>
+    </tr>
+
+    <tr><td>1</td><td>Amit</td><td>21</td><td>Java</td><td>Pune</td></tr>
+    <tr><td>2</td><td>Ravi</td><td>22</td><td>Python</td><td>Mumbai</td></tr>
+    <tr><td>3</td><td>Neha</td><td>20</td><td>React</td><td>Delhi</td></tr>
+    <tr><td>4</td><td>Pooja</td><td>23</td><td>Spring</td><td>Bangalore</td></tr>
+    <tr><td>5</td><td>Rahul</td><td>21</td><td>Node</td><td>Hyderabad</td></tr>
+    <tr><td>6</td><td>Ankit</td><td>24</td><td>Java</td><td>Pune</td></tr>
+    <tr><td>7</td><td>Priya</td><td>22</td><td>Python</td><td>Nagpur</td></tr>
+    <tr><td>8</td><td>Sachin</td><td>25</td><td>Angular</td><td>Mumbai</td></tr>
+    <tr><td>9</td><td>Kiran</td><td>21</td><td>React</td><td>Chennai</td></tr>
+    <tr><td>10</td><td>Sunil</td><td>23</td><td>Spring</td><td>Pune</td></tr>
+    <tr><td>11</td><td>Meena</td><td>20</td><td>Java</td><td>Delhi</td></tr>
+    <tr><td>12</td><td>Vikas</td><td>24</td><td>Python</td><td>Noida</td></tr>
+    <tr><td>13</td><td>Rohit</td><td>22</td><td>Node</td><td>Indore</td></tr>
+    <tr><td>14</td><td>Swati</td><td>21</td><td>React</td><td>Bhopal</td></tr>
+    <tr><td>15</td><td>Manish</td><td>23</td><td>Java</td><td>Jaipur</td></tr>
+
+</table>
+<script>
+    function changeTheme(evenRowColor,oddRowColor){
+        let table = document.getElementById("data");
+        table.style.color = "white";
+        let rowArray = table.rows;
+        for(let index = 0; index<rowArray.length; index++){
+            if(index%2){
+                rowArray[index].style.backgroundColor = oddRowColor;
+            }
+            else
+              rowArray[index].style.backgroundColor = evenRowColor;
+        }
+    }
+</script>
+</body>
+</html>

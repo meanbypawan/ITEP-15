@@ -1,0 +1,42 @@
+<html>
+    <body>
+        <input placeholder="Enter roll number" type="text" id="roll"/>
+        <input placeholder="Enter name" type="text" id="name"/>
+        <input placeholder="Enter course" type="text" id="course"/>
+        <input placeholder="Enter semester" type="text" id="sem"/>
+        <button onclick="addRecord()">ADD</button>
+        <br/><br/>
+        <table id="data" width="100%" border="1">
+            <tr>
+                <td>Roll number</td>
+                <td>Name</td>
+                <td>Course</td>
+                <td>Semester</td>
+            </tr>
+        </table>
+        <script>
+            function addRecord(){
+                let roll = document.querySelector("#roll").value;
+                let name = document.getElementById("name").value;
+                let course = document.getElementById("course").value;
+                let sem = document.getElementById("sem").value;
+                let table = document.getElementById("data");
+                let tr = document.createElement("tr");
+                let rollTD = document.createElement("td");
+                
+                let nameTD = document.createElement("td");
+                let courseTD = document.createElement("td");
+                let semTD = document.createElement("td");
+                rollTD.innerHTML = `<b>${roll}</b>`;
+                nameTD.innerText = name;
+                courseTD.innerText = course;
+                semTD.innerText = sem;
+                tr.appendChild(rollTD);
+                tr.appendChild(nameTD);
+                tr.appendChild(courseTD);
+                tr.appendChild(semTD);
+                table.appendChild(tr);
+            }
+        </script>
+    </body>
+</html>

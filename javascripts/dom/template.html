@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+            body{
+                margin: 0;
+            }
+            #wrapper{
+                min-height: 650px;
+                background: linear-gradient(to bottom,red,yellow);
+            }
+            header{
+                height: 60px;
+                background-color: grey;
+                display: flex;
+                flex-direction: row;
+            }
+            .left{
+                border: 1px solid white;
+                width:50%;
+                height:60px;
+                display: flex;
+            }
+            .right{
+                border: 1px solid black;
+                width: 50%;
+                height: 60px;
+            }
+            .left ul{
+                list-style: none;
+                border: 1px solid white;
+            }
+            .left ul li{
+                display: inline-block;
+            }
+        </style>
+    </head>
+    <body>
+      <div id="wrapper">
+        <header>
+            <div class="left">
+                <span>Steller</span>
+                <ul>
+                    <li>Desktop</li>
+                    <li>Tablet</li>
+                    <li>Tablet(Portrait)</li>
+                    <li>Mobile</li>
+                </ul>
+            </div>
+            <div class="right"></div>
+        </header>
+      </div>
+    </body>
+</html>
