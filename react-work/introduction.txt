@@ -1,0 +1,71 @@
+ReactJS:-
+1.It is developed and maintain by the facebook.
+2. Is is used develop SIngle page application
+   (SPA).
+   a. React.JS
+   b. Angular
+   --------------------------------------
+   React.Js is javascript library while Angular
+   is complete framework.
+
+   ReactJs.js use javascript as primary lang.
+   while angular use typescript as primary lang.
+
+   React.Js follow uni-directional(one-way binding)
+    data flow
+   architecture while angular bi-directional
+   (two-way binding )data flow.
+
+   Rendering:- ReactJs use virtual DOM,
+   Angular use Actual DOM
+
+   Virtual Dom is a copy of actual dom maintain
+   in a browser memory and it is very light weight.
+
+   When a component's state(data) change React create a new
+   virtual dom tree for the component.
+
+   React compare new Virtual Dom Whith Previus
+   virtulal Dom to identify the difference.   
+
+   Process of calculating these difference
+   is called diffing.
+
+   Reconciler :- It determines when to upodate
+   Virutal DOM and is also keep Virtual DOM and
+   Actual DOM in sync.
+   Reconcilition.
+
+   --------------------------------------------
+   3. ReactJs applicat uses component based 
+   architecture.
+   4. Component :- It is part of UI made by three things.
+       HTML(JSX) + CSS + Javascript
+       JSX (Javascript XML) :- It allows you to write HTML code in reacjs
+   
+   5. Each and every application has a one component by default called 
+      App Component also called root component.
+   
+   6. All the component should be child of App component(All component will complete
+   under the App)
+     App 
+      |--Header
+          |-----Logo
+      |--Navigation
+     Header, Navigation, Footer, Login, Register, Gallery.......
+   7. Two types of component
+       a. statefull component(class component) 
+       b. stateless component (functional component)
+       From 16 react introduce concept of hooks
+          Function Component + hooks ===> statefull component
+       statefull
+       stateless
+       class comp
+       functional comp
+       controlled comp
+       uncontrolled comp
+       pure component
+      
+     node package runner/exeuctor
+     npx create-react-app application_name
+
