@@ -1,0 +1,263 @@
+/********** Template CSS **********/
+
+/*** Spinner ***/
+#spinner {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s ease-out, visibility 0s linear .5s;
+    z-index: 99999;
+}
+
+#spinner.show {
+    transition: opacity .5s ease-out, visibility 0s linear 0s;
+    visibility: visible;
+    opacity: 1;
+}
+
+.back-to-top {
+    position: fixed;
+    display: none;
+    right: 45px;
+    bottom: 45px;
+    z-index: 99;
+}
+
+/*** Button ***/
+.btn {
+    transition: .5s;
+}
+
+.btn-square {
+    width: 38px;
+    height: 38px;
+}
+
+.btn-sm-square {
+    width: 32px;
+    height: 32px;
+}
+
+.btn-lg-square {
+    width: 48px;
+    height: 48px;
+}
+
+.btn-square,
+.btn-sm-square,
+.btn-lg-square {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+    border-radius: 3px;
+}
+
+
+/*** Navbar ***/
+.sticky-top {
+    top: -150px;
+    transition: .5s;
+}
+
+.navbar {
+    padding: 15px 0;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px;
+}
+
+.navbar .navbar-nav .nav-link {
+    margin-left: 30px;
+    padding: 0;
+    outline: none;
+    color: var(--bs-secondary);
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: var(--bs-white);
+}
+
+.navbar .dropdown-toggle::after {
+    border: none;
+    content: "\f107";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+.navbar .dropdown-menu .dropdown-item:hover,
+.navbar .dropdown-menu .dropdown-item.active {
+    color: var(--bs-white);
+    background: var(--bs-primary);
+}
+
+@media (max-width: 991.98px) {
+    .sticky-top {
+        background: var(--bs-primary);
+    }
+
+    .navbar .navbar-nav .nav-link {
+        margin-left: 0;
+        padding: 10px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar .nav-item .dropdown-menu {
+        display: block;
+        border: none;
+        margin-top: 0;
+        top: 150%;
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+    }
+
+    .navbar .nav-item:hover .dropdown-menu {
+        top: 100%;
+        visibility: visible;
+        transition: .5s;
+        opacity: 1;
+    }
+}
+
+
+/*** Hero Header ***/
+.hero-header {
+    position: relative;
+    margin-top: -100px;
+    padding-top: 150px;
+    overflow: hidden;
+    background: rgba(216, 19, 36, 0.9);
+}
+
+.hero-header::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../img/hero-header-bg.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    animation: animateUpDown 8s ease infinite;
+    z-index: -1;
+}
+
+@keyframes animateUpDown { 
+    0% { 
+        top: 0px;
+        left: 0px;
+    }
+    25% { 
+        top: -15px;
+        left: 15px;
+    }
+    50% { 
+        top: 0px;
+        left: 30px;
+    }
+    75% { 
+        top: 15px;
+        left: 15px;
+    }
+    100% { 
+        top: 0px;
+        left: 0px;
+    }
+}
+
+.hero-header .breadcrumb-item+.breadcrumb-item::before {
+    color: var(--bs-light);
+}
+
+
+/*** Service ***/
+.service-item {
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 0 45px rgba(0, 0, 0, .07);
+    border-radius: 45px 3px 3px 3px;
+    transition: .5s;
+}
+
+.service-item:hover {
+    margin-top: -10px;
+}
+
+.service-item .service-icon {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0 0 45px 0;
+}
+
+.service-list a.btn-light:hover {
+    color: var(--bs-white) !important;
+    background: var(--bs-primary);
+}
+
+.service-list a.btn-light i {
+    color: var(--bs-primary);
+    transition: .5s;
+}
+
+.service-list a.btn-light:hover i {
+    color: var(--bs-secondary);
+}
+
+/*** Footer ***/
+.footer .btn.btn-link {
+    display: block;
+    margin-bottom: 10px;
+    padding: 0;
+    text-align: left;
+    color: rgba(255, 255, 255, .5);
+    font-weight: normal;
+    transition: .3s;
+}
+
+.footer .btn.btn-link:hover {
+    color: var(--bs-white);
+    letter-spacing: 1px;
+    box-shadow: none;
+}
+
+.footer .btn.btn-link::before {
+    position: relative;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
+}
+
+.footer .copyright {
+    padding: 25px 0;
+    border-top: 1px solid rgba(256, 256, 256, .1);
+}
+
+.footer .copyright a {
+    color: rgba(255, 255, 255, .5);
+}
+
+.footer .copyright a:hover {
+    color: var(--bs-white);
+}
+
+.footer .footer-menu a {
+    margin-right: 15px;
+    padding-right: 15px;
+    border-right: 1px solid rgba(255, 255, 255, .1);
+}
+
+.footer .footer-menu a:last-child {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+}
