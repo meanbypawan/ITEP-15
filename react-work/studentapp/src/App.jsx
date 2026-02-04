@@ -4,15 +4,17 @@ class App extends Component{
   constructor(){
     super();
     this.state = {
-      studentList: Data
+      studentList: Data,
+      roll: null,
+      name: "",
+      gender: "",
+      branch:"",
+      branchFilter: "All"
     }
   }
   addStudent = ()=>{
-    let roll = document.getElementById("roll").value;
-    let name = document.getElementById("name").value;
-    let gender = document.getElementById("gender").value;
-    let branch = document.getElementById("branch").value;
-    let newStudent = {roll, name, gender,branch};
+    
+    let newStudent = {roll:this.state.roll, name:this.state.name, gender: this.state.gender,branch:this.state.branch};
     this.setState({studentList: [...this.state.studentList,newStudent]})
   }
   removeStudent = (roll)=>{
@@ -31,22 +33,22 @@ class App extends Component{
       <div className="container mt-3">
         <div className="row">
           <div className="col-md-6">
-            <input id="roll" type="text" placeholder="Enter roll number" className="form-control"/>
+            <input id="roll" onChange={(event)=>{this.setState({roll: event.target.value})}} type="text" placeholder="Enter roll number" className="form-control"/>
           </div>
           <div className="col-md-6">
-            <input id="name" type="text" placeholder="Enter student name" className="form-control"/>
+            <input onChange={(event)=>{this.setState({name:event.target.value})}} id="name" type="text" placeholder="Enter student name" className="form-control"/>
           </div>
         </div>
         <div className="row mt-2">
           <div className="col-md-6">
-            <select id="gender" className="form-control">
+            <select onChange={(event)=>{this.setState({gender:event.target.value})}} id="gender" className="form-control">
               <option>select gender</option>
               <option value="Male">Male</option>
               <option value="Female">Female</option>
             </select>
           </div>
           <div className="col-md-6">
-            <select id="branch" className="form-control">
+            <select onChange={(event)=>{this.setState({branch:event.target.value})}} id="branch" className="form-control">
               <option value="0">select branch</option>
               <option value="CS">CS</option>
               <option value="IT">IT</option>
@@ -58,6 +60,13 @@ class App extends Component{
         <div className="row mt-3">
           <div className="col-md-6">
             <button onClick={this.addStudent} className="btn btn-success">ADD</button>
+          </div>
+          <div className="col-md-6">
+            <button onClick={()=>this.setState({branchFilter:"CS"})} className="btn btn-primary">CS ({this.state.studentList.filter((student)=>{return student.branch=="CS"}).length})</button>
+            <button onClick={()=>this.setState({branchFilter:"IT"})} className="btn btn-warning ml-2">IT ({this.state.studentList.filter((student)=>{return student.branch=="IT"}).length})</button>
+            <button onClick={()=>this.setState({branchFilter:"CV"})} className="btn btn-danger ml-2">CV ({this.state.studentList.filter((student)=>{return student.branch=="CV"}).length})</button>
+            <button onClick={()=>this.setState({branchFilter:"MECH"})} className="btn btn-info ml-2">MECH ({this.state.studentList.filter((student)=>{return student.branch=="MECH"}).length})</button>
+            <button onClick={()=>this.setState({branchFilter:"All"})} className="btn btn-secondary ml-2">Total ({this.state.studentList.length})</button>
           </div>
         </div>
       </div>
@@ -73,7 +82,7 @@ class App extends Component{
             </tr>
           </thead>
           <tbody>
-            {this.state.studentList.map((student,index)=>{return <tr key={student.roll}>
+            {this.state.studentList.filter((student)=>{return this.state.branchFilter == "All" || student.branch == this.state.branchFilter}).map((student,index)=>{return <tr key={student.roll}>
               <td>{student.roll}</td>
               <td>{student.name}</td>
               <td style={{textTransform: "capitalize"}}>{student.gender}</td>

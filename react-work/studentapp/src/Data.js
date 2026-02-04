@@ -18,7 +18,7 @@ export default [
         "branch":"CS"
     },
     {
-        "roll":1003,
+        "roll":1006,
         "name":"Peeku",
         "gender":"male",
         "branch":"CV"
