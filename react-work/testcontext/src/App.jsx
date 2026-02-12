@@ -9,11 +9,11 @@ function App(){
   return <>
     <h1>App Component...</h1>
     <h1>Counter: {counter}</h1>
-    <CounterContext value={{counter,setCounter}}>
-     <MessageContext value={{message}}>
+    <CounterContext.Provider value={{counter,setCounter}}>
+     <MessageContext.Provider value={{message}}>
        <First/>
-     </MessageContext>
-    </CounterContext>
+     </MessageContext.Provider>
+    </CounterContext.Provider>
   </>
 }
 export default App;
