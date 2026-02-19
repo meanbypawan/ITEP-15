@@ -1,21 +1,9 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Api from "../../Api";
+import { CategoryContext } from "../../App";
 function Header() {
-    const [categoryList,setCategoryList] = useState([]);
-    useEffect(()=>{
-        loadCategories();
-    },[]);
-    const loadCategories = async ()=>{
-       try{ 
-        let response = await axios.get(Api.LOAD_CATEGORIES);
-        setCategoryList(response.data);
-       }
-       catch(err){
-        console.log(err);
-       } 
-    }
+    let {categoryList,setCategoryList} = useContext(CategoryContext);
     return <>
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
             <div className="container-fluid">

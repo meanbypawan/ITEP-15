@@ -3,3 +3,12 @@
     min-height: 300px;
     box-shadow: 10px 10px 10px grey;
 }
+.category-label{
+    background-color: grey;
+    padding: 5px;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    margin-right: 5px;
+    display: inline-block;
+}
