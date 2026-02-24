@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CategoryContext } from "../../App";
+import { isLoggedIn } from "../auth/Auth";
 function Header() {
     let {categoryList,setCategoryList} = useContext(CategoryContext);
     return <>
@@ -26,7 +27,16 @@ function Header() {
                         <li className="nav-item">
                             <a className="nav-link" href="#">Contact us</a>
                         </li>
-                        
+                        {!isLoggedIn() && <li className="nav-item">
+                            <Link className="nav-link" to="/sign-in">Sign in</Link>
+                        </li>}
+
+                        {!isLoggedIn() && <li className="nav-item">
+                            <Link className="nav-link" to="/sign-up">Sign up</Link>
+                        </li>}
+                        {isLoggedIn() && <li className="nav-item">
+                            <Link className="nav-link" to="">Sign out</Link>
+                        </li>}
                     </ul>
                 </div>
             </div>

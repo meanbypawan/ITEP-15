@@ -4,6 +4,9 @@ import { createContext, useEffect, useState } from "react";
 import Api from "./Api";
 import axios from "axios";
 import ViewMore from "./components/view-more/ViewMore";
+import SignUp from "./components/signup/SignUp";
+import SignIn from "./components/signin/Signin";
+import 'react-toastify/dist/ReactToastify.css';
 export const CategoryContext = createContext();
 function App(){   
   const [categoryList,setCategoryList] = useState([]);
@@ -24,6 +27,8 @@ function App(){
      <Routes>
        <Route path="/" element={<Home/>}/>
        <Route path="/view-more/:id" element={<ViewMore/>}/>
+       <Route path="/sign-up" element={<SignUp/>}/>
+       <Route path="/sign-in" element={<SignIn/>}/>
      </Routes>
     </CategoryContext.Provider>
   </>
