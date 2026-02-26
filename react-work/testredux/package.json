@@ -1,5 +1,5 @@
 {
-  "name": "ecommerce-frontend",
+  "name": "testredux",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -11,13 +11,9 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
-    "axios": "^1.13.5",
-    "bootstrap": "^5.3.8",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "react-redux": "^9.2.0",
-    "react-router-dom": "^7.13.0",
-    "react-toastify": "^11.0.5"
+    "react-redux": "^9.2.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

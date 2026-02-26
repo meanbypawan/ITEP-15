@@ -7,6 +7,8 @@ import ViewMore from "./components/view-more/ViewMore";
 import SignUp from "./components/signup/SignUp";
 import SignIn from "./components/signin/Signin";
 import 'react-toastify/dist/ReactToastify.css';
+import BuyNow from "./components/buy-now/BuyNow";
+import Auth from "./components/auth/Auth";
 export const CategoryContext = createContext();
 function App(){   
   const [categoryList,setCategoryList] = useState([]);
@@ -29,6 +31,7 @@ function App(){
        <Route path="/view-more/:id" element={<ViewMore/>}/>
        <Route path="/sign-up" element={<SignUp/>}/>
        <Route path="/sign-in" element={<SignIn/>}/>
+       <Route path="/buy-now" element={<Auth><BuyNow/></Auth>}/>
      </Routes>
     </CategoryContext.Provider>
   </>

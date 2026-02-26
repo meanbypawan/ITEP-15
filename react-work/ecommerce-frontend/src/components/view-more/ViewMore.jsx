@@ -49,7 +49,7 @@ function ViewMore() {
                   <p><b>Rating : </b>{product?.rating}/(5)</p>
                   <div className="d-flex flex-row">
                      <button className="btn btn-outline-secondary" style={{width:"48%"}}>Add To Cart</button>
-                     <button className="btn btn-warning ms-2" style={{width:"48%"}}>Buy now</button>
+                     <button onClick={()=>navigate("/buy-now")} className="btn btn-warning ms-2" style={{width:"48%"}}>Buy now</button>
                   </div>
                </div>
             </div>

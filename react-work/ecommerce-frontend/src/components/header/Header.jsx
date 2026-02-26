@@ -2,9 +2,15 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { CategoryContext } from "../../App";
-import { isLoggedIn } from "../auth/Auth";
+import { useDispatch, useSelector } from "react-redux";
+import { signOut } from "../../redux-config/UserSlice";
 function Header() {
     let {categoryList,setCategoryList} = useContext(CategoryContext);
+    let {isLoggedIn} = useSelector((store)=>store.user);
+    const dispatch = useDispatch();
+    const signOutUser = ()=>{
+      dispatch(signOut());
+    }
     return <>
         <nav className="navbar navbar-expand-sm bg-dark navbar-dark">
             <div className="container-fluid">
@@ -27,15 +33,15 @@ function Header() {
                         <li className="nav-item">
                             <a className="nav-link" href="#">Contact us</a>
                         </li>
-                        {!isLoggedIn() && <li className="nav-item">
+                        {!isLoggedIn && <li className="nav-item">
                             <Link className="nav-link" to="/sign-in">Sign in</Link>
                         </li>}
 
-                        {!isLoggedIn() && <li className="nav-item">
+                        {!isLoggedIn && <li className="nav-item">
                             <Link className="nav-link" to="/sign-up">Sign up</Link>
                         </li>}
-                        {isLoggedIn() && <li className="nav-item">
-                            <Link className="nav-link" to="">Sign out</Link>
+                        {isLoggedIn && <li className="nav-item">
+                            <Link className="nav-link" onClick={signOutUser}>Sign out</Link>
                         </li>}
                     </ul>
                 </div>
