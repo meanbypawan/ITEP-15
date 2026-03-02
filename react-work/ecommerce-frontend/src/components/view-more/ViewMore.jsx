@@ -26,6 +26,9 @@ function ViewMore() {
    const swapImage = (currentImageUrl)=>{
       mainImgRef.current.src = currentImageUrl;
    }
+   const navigateToBuyNow = (product)=>{
+      navigate("/buy-now",{state:{params: product}});
+   }
    return <>
       <Header />
       <div className="container mt-3">
@@ -49,7 +52,7 @@ function ViewMore() {
                   <p><b>Rating : </b>{product?.rating}/(5)</p>
                   <div className="d-flex flex-row">
                      <button className="btn btn-outline-secondary" style={{width:"48%"}}>Add To Cart</button>
-                     <button onClick={()=>navigate("/buy-now")} className="btn btn-warning ms-2" style={{width:"48%"}}>Buy now</button>
+                     <button onClick={()=>navigateToBuyNow(product)} className="btn btn-warning ms-2" style={{width:"48%"}}>Buy now</button>
                   </div>
                </div>
             </div>

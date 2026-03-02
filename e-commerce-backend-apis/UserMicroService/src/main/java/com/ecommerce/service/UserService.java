@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 
 import com.ecommerce.dto.UserDTO;
 import com.ecommerce.entity.User;
+import com.ecommerce.exception.ResourceNotFoundException;
 import com.ecommerce.repo.UserRepository;
 
 import jakarta.transaction.Transactional;
@@ -28,4 +29,27 @@ public class UserService {
      dto.setContact(dbUser.getContact());
      return dto;
   }
+  public UserDTO getUserById(int id) {
+	  User dbUser =  userRepo.findById(id).orElseThrow(()->new ResourceNotFoundException("user not found"));
+      UserDTO dto = new UserDTO();
+      dto.setId(dbUser.getId());
+      dto.setEmail(dbUser.getEmail());
+      dto.setContact(dbUser.getContact());
+      return dto;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
